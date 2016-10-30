@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.8 svn-revision#13980. --><xs:schema xmlns:tns="http://webservice.uts.umls.nlm.nih.gov/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.uts.umls.nlm.nih.gov/">
+
+<xs:element name="getDownloadArtifact" type="tns:getDownloadArtifact" />
+
+<xs:element name="getDownloadArtifactResponse" type="tns:getDownloadArtifactResponse" />
+
+<xs:element name="getDownloadArtifacts" type="tns:getDownloadArtifacts" />
+
+<xs:element name="getDownloadArtifactsResponse" type="tns:getDownloadArtifactsResponse" />
+
+<xs:element name="getDownloadRelease" type="tns:getDownloadRelease" />
+
+<xs:element name="getDownloadReleaseResponse" type="tns:getDownloadReleaseResponse" />
+
+<xs:element name="getDownloadReleases" type="tns:getDownloadReleases" />
+
+<xs:element name="getDownloadReleasesResponse" type="tns:getDownloadReleasesResponse" />
+
+<xs:element name="getLatestDownloadRelease" type="tns:getLatestDownloadRelease" />
+
+<xs:element name="getLatestDownloadReleaseResponse" type="tns:getLatestDownloadReleaseResponse" />
+
+<xs:element name="getLatestDownloadReleaseSet" type="tns:getLatestDownloadReleaseSet" />
+
+<xs:element name="getLatestDownloadReleaseSetResponse" type="tns:getLatestDownloadReleaseSetResponse" />
+
+<xs:element name="getValidDownloadGroups" type="tns:getValidDownloadGroups" />
+
+<xs:element name="getValidDownloadGroupsResponse" type="tns:getValidDownloadGroupsResponse" />
+
+<xs:element name="init" type="tns:init" />
+
+<xs:element name="initResponse" type="tns:initResponse" />
+
+<xs:complexType name="getDownloadReleases">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="groupName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDownloadReleasesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dlReleaseDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dlReleaseDTO">
+<xs:sequence>
+<xs:element name="artifacts" type="tns:dlArtifactDTO" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="authRequired" type="xs:string" minOccurs="0" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="frequency" type="xs:string" minOccurs="0" />
+<xs:element name="groups" type="tns:dlGroupDTO" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="notes" type="xs:string" minOccurs="0" />
+<xs:element name="releaseDate" type="xs:string" minOccurs="0" />
+<xs:element name="type" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dlArtifactDTO">
+<xs:sequence>
+<xs:element name="artifactId" type="xs:string" minOccurs="0" />
+<xs:element name="checksum" type="xs:string" minOccurs="0" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="fileLocation" type="xs:string" minOccurs="0" />
+<xs:element name="fileName" type="xs:string" minOccurs="0" />
+<xs:element name="fileSize" type="xs:string" minOccurs="0" />
+<xs:element name="groups" type="tns:dlGroupDTO" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="md5" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="published" type="xs:string" minOccurs="0" />
+<xs:element name="readme" type="xs:string" minOccurs="0" />
+<xs:element name="releaseId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dlGroupDTO">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDownloadArtifacts">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="releaseName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDownloadArtifactsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dlArtifactDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLatestDownloadRelease">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="groupName" type="xs:string" minOccurs="0" />
+<xs:element name="releaaseType" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLatestDownloadReleaseResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dlReleaseDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDownloadRelease">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="releaseName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDownloadReleaseResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dlReleaseDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getValidDownloadGroups">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getValidDownloadGroupsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dlGroupDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDownloadArtifact">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="artifactId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDownloadArtifactResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dlArtifactDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLatestDownloadReleaseSet">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="groupName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLatestDownloadReleaseSetResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dlReleaseDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="init">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="initResponse">
+<xs:sequence />
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,2810 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.8 svn-revision#13980. --><xs:schema xmlns:tns="http://webservice.uts.umls.nlm.nih.gov/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.uts.umls.nlm.nih.gov/">
+
+<xs:element name="UtsFault" type="tns:UtsFault" />
+
+<xs:element name="getAtom" type="tns:getAtom" />
+
+<xs:element name="getAtomAtomRelations" type="tns:getAtomAtomRelations" />
+
+<xs:element name="getAtomAtomRelationsResponse" type="tns:getAtomAtomRelationsResponse" />
+
+<xs:element name="getAtomAttributes" type="tns:getAtomAttributes" />
+
+<xs:element name="getAtomAttributesResponse" type="tns:getAtomAttributesResponse" />
+
+<xs:element name="getAtomCodeRelations" type="tns:getAtomCodeRelations" />
+
+<xs:element name="getAtomCodeRelationsResponse" type="tns:getAtomCodeRelationsResponse" />
+
+<xs:element name="getAtomConceptRelations" type="tns:getAtomConceptRelations" />
+
+<xs:element name="getAtomConceptRelationsResponse" type="tns:getAtomConceptRelationsResponse" />
+
+<xs:element name="getAtomContentViewMemberAttributes" type="tns:getAtomContentViewMemberAttributes" />
+
+<xs:element name="getAtomContentViewMemberAttributesResponse" type="tns:getAtomContentViewMemberAttributesResponse" />
+
+<xs:element name="getAtomContentViewMemberships" type="tns:getAtomContentViewMemberships" />
+
+<xs:element name="getAtomContentViewMembershipsResponse" type="tns:getAtomContentViewMembershipsResponse" />
+
+<xs:element name="getAtomCooccurrences" type="tns:getAtomCooccurrences" />
+
+<xs:element name="getAtomCooccurrencesResponse" type="tns:getAtomCooccurrencesResponse" />
+
+<xs:element name="getAtomDefinitions" type="tns:getAtomDefinitions" />
+
+<xs:element name="getAtomDefinitionsResponse" type="tns:getAtomDefinitionsResponse" />
+
+<xs:element name="getAtomResponse" type="tns:getAtomResponse" />
+
+<xs:element name="getAtomSourceConceptRelations" type="tns:getAtomSourceConceptRelations" />
+
+<xs:element name="getAtomSourceConceptRelationsResponse" type="tns:getAtomSourceConceptRelationsResponse" />
+
+<xs:element name="getAtomSourceDescriptorRelations" type="tns:getAtomSourceDescriptorRelations" />
+
+<xs:element name="getAtomSourceDescriptorRelationsResponse" type="tns:getAtomSourceDescriptorRelationsResponse" />
+
+<xs:element name="getAtomSubsetMemberships" type="tns:getAtomSubsetMemberships" />
+
+<xs:element name="getAtomSubsetMembershipsResponse" type="tns:getAtomSubsetMembershipsResponse" />
+
+<xs:element name="getAtomTreePositionChildren" type="tns:getAtomTreePositionChildren" />
+
+<xs:element name="getAtomTreePositionChildrenResponse" type="tns:getAtomTreePositionChildrenResponse" />
+
+<xs:element name="getAtomTreePositionPathsToRoot" type="tns:getAtomTreePositionPathsToRoot" />
+
+<xs:element name="getAtomTreePositionPathsToRootResponse" type="tns:getAtomTreePositionPathsToRootResponse" />
+
+<xs:element name="getAtomTreePositionSiblings" type="tns:getAtomTreePositionSiblings" />
+
+<xs:element name="getAtomTreePositionSiblingsResponse" type="tns:getAtomTreePositionSiblingsResponse" />
+
+<xs:element name="getAtomTreePositions" type="tns:getAtomTreePositions" />
+
+<xs:element name="getAtomTreePositionsResponse" type="tns:getAtomTreePositionsResponse" />
+
+<xs:element name="getCode" type="tns:getCode" />
+
+<xs:element name="getCodeAtomRelations" type="tns:getCodeAtomRelations" />
+
+<xs:element name="getCodeAtomRelationsResponse" type="tns:getCodeAtomRelationsResponse" />
+
+<xs:element name="getCodeAtoms" type="tns:getCodeAtoms" />
+
+<xs:element name="getCodeAtomsResponse" type="tns:getCodeAtomsResponse" />
+
+<xs:element name="getCodeAttributes" type="tns:getCodeAttributes" />
+
+<xs:element name="getCodeAttributesResponse" type="tns:getCodeAttributesResponse" />
+
+<xs:element name="getCodeCodeRelations" type="tns:getCodeCodeRelations" />
+
+<xs:element name="getCodeCodeRelationsResponse" type="tns:getCodeCodeRelationsResponse" />
+
+<xs:element name="getCodeDefinitions" type="tns:getCodeDefinitions" />
+
+<xs:element name="getCodeDefinitionsResponse" type="tns:getCodeDefinitionsResponse" />
+
+<xs:element name="getCodeResponse" type="tns:getCodeResponse" />
+
+<xs:element name="getCodeSourceConceptRelations" type="tns:getCodeSourceConceptRelations" />
+
+<xs:element name="getCodeSourceConceptRelationsResponse" type="tns:getCodeSourceConceptRelationsResponse" />
+
+<xs:element name="getCodeSourceDescriptorRelations" type="tns:getCodeSourceDescriptorRelations" />
+
+<xs:element name="getCodeSourceDescriptorRelationsResponse" type="tns:getCodeSourceDescriptorRelationsResponse" />
+
+<xs:element name="getCodeTreePositionChildren" type="tns:getCodeTreePositionChildren" />
+
+<xs:element name="getCodeTreePositionChildrenResponse" type="tns:getCodeTreePositionChildrenResponse" />
+
+<xs:element name="getCodeTreePositionPathsToRoot" type="tns:getCodeTreePositionPathsToRoot" />
+
+<xs:element name="getCodeTreePositionPathsToRootResponse" type="tns:getCodeTreePositionPathsToRootResponse" />
+
+<xs:element name="getCodeTreePositionSiblings" type="tns:getCodeTreePositionSiblings" />
+
+<xs:element name="getCodeTreePositionSiblingsResponse" type="tns:getCodeTreePositionSiblingsResponse" />
+
+<xs:element name="getCodeTreePositions" type="tns:getCodeTreePositions" />
+
+<xs:element name="getCodeTreePositionsResponse" type="tns:getCodeTreePositionsResponse" />
+
+<xs:element name="getConcept" type="tns:getConcept" />
+
+<xs:element name="getConceptAtomRelations" type="tns:getConceptAtomRelations" />
+
+<xs:element name="getConceptAtomRelationsResponse" type="tns:getConceptAtomRelationsResponse" />
+
+<xs:element name="getConceptAtoms" type="tns:getConceptAtoms" />
+
+<xs:element name="getConceptAtomsResponse" type="tns:getConceptAtomsResponse" />
+
+<xs:element name="getConceptAttributes" type="tns:getConceptAttributes" />
+
+<xs:element name="getConceptAttributesResponse" type="tns:getConceptAttributesResponse" />
+
+<xs:element name="getConceptConceptRelations" type="tns:getConceptConceptRelations" />
+
+<xs:element name="getConceptConceptRelationsResponse" type="tns:getConceptConceptRelationsResponse" />
+
+<xs:element name="getConceptContentViewMemberships" type="tns:getConceptContentViewMemberships" />
+
+<xs:element name="getConceptContentViewMembershipsResponse" type="tns:getConceptContentViewMembershipsResponse" />
+
+<xs:element name="getConceptDefinitions" type="tns:getConceptDefinitions" />
+
+<xs:element name="getConceptDefinitionsResponse" type="tns:getConceptDefinitionsResponse" />
+
+<xs:element name="getConceptResponse" type="tns:getConceptResponse" />
+
+<xs:element name="getContentView" type="tns:getContentView" />
+
+<xs:element name="getContentViewAtomMembers" type="tns:getContentViewAtomMembers" />
+
+<xs:element name="getContentViewAtomMembersResponse" type="tns:getContentViewAtomMembersResponse" />
+
+<xs:element name="getContentViewAttributes" type="tns:getContentViewAttributes" />
+
+<xs:element name="getContentViewAttributesResponse" type="tns:getContentViewAttributesResponse" />
+
+<xs:element name="getContentViewConceptMembers" type="tns:getContentViewConceptMembers" />
+
+<xs:element name="getContentViewConceptMembersResponse" type="tns:getContentViewConceptMembersResponse" />
+
+<xs:element name="getContentViewMemberAttributes" type="tns:getContentViewMemberAttributes" />
+
+<xs:element name="getContentViewMemberAttributesResponse" type="tns:getContentViewMemberAttributesResponse" />
+
+<xs:element name="getContentViewRelationMembers" type="tns:getContentViewRelationMembers" />
+
+<xs:element name="getContentViewRelationMembersResponse" type="tns:getContentViewRelationMembersResponse" />
+
+<xs:element name="getContentViewResponse" type="tns:getContentViewResponse" />
+
+<xs:element name="getContentViewSourceConceptMembers" type="tns:getContentViewSourceConceptMembers" />
+
+<xs:element name="getContentViewSourceConceptMembersResponse" type="tns:getContentViewSourceConceptMembersResponse" />
+
+<xs:element name="getContentViews" type="tns:getContentViews" />
+
+<xs:element name="getContentViewsResponse" type="tns:getContentViewsResponse" />
+
+<xs:element name="getCooccurrenceSubheadingFrequencies" type="tns:getCooccurrenceSubheadingFrequencies" />
+
+<xs:element name="getCooccurrenceSubheadingFrequenciesResponse" type="tns:getCooccurrenceSubheadingFrequenciesResponse" />
+
+<xs:element name="getDefaultPreferredAtom" type="tns:getDefaultPreferredAtom" />
+
+<xs:element name="getDefaultPreferredAtomResponse" type="tns:getDefaultPreferredAtomResponse" />
+
+<xs:element name="getDefinitionAttributes" type="tns:getDefinitionAttributes" />
+
+<xs:element name="getDefinitionAttributesResponse" type="tns:getDefinitionAttributesResponse" />
+
+<xs:element name="getMapObjectAttributes" type="tns:getMapObjectAttributes" />
+
+<xs:element name="getMapObjectAttributesResponse" type="tns:getMapObjectAttributesResponse" />
+
+<xs:element name="getMapObjectFromMapping" type="tns:getMapObjectFromMapping" />
+
+<xs:element name="getMapObjectFromMappingResponse" type="tns:getMapObjectFromMappingResponse" />
+
+<xs:element name="getMapObjectToMapping" type="tns:getMapObjectToMapping" />
+
+<xs:element name="getMapObjectToMappingResponse" type="tns:getMapObjectToMappingResponse" />
+
+<xs:element name="getMapSetAttributes" type="tns:getMapSetAttributes" />
+
+<xs:element name="getMapSetAttributesResponse" type="tns:getMapSetAttributesResponse" />
+
+<xs:element name="getMappingAttributes" type="tns:getMappingAttributes" />
+
+<xs:element name="getMappingAttributesResponse" type="tns:getMappingAttributesResponse" />
+
+<xs:element name="getMappings" type="tns:getMappings" />
+
+<xs:element name="getMappingsResponse" type="tns:getMappingsResponse" />
+
+<xs:element name="getMapsets" type="tns:getMapsets" />
+
+<xs:element name="getMapsetsResponse" type="tns:getMapsetsResponse" />
+
+<xs:element name="getNewConcepts" type="tns:getNewConcepts" />
+
+<xs:element name="getNewConceptsCount" type="tns:getNewConceptsCount" />
+
+<xs:element name="getNewConceptsCountResponse" type="tns:getNewConceptsCountResponse" />
+
+<xs:element name="getNewConceptsResponse" type="tns:getNewConceptsResponse" />
+
+<xs:element name="getRelationAttributes" type="tns:getRelationAttributes" />
+
+<xs:element name="getRelationAttributesResponse" type="tns:getRelationAttributesResponse" />
+
+<xs:element name="getRelationContentViewMemberships" type="tns:getRelationContentViewMemberships" />
+
+<xs:element name="getRelationContentViewMembershipsResponse" type="tns:getRelationContentViewMembershipsResponse" />
+
+<xs:element name="getRelationRelations" type="tns:getRelationRelations" />
+
+<xs:element name="getRelationRelationsResponse" type="tns:getRelationRelationsResponse" />
+
+<xs:element name="getRelationSubsetMemberships" type="tns:getRelationSubsetMemberships" />
+
+<xs:element name="getRelationSubsetMembershipsResponse" type="tns:getRelationSubsetMembershipsResponse" />
+
+<xs:element name="getRootAtomTreePositions" type="tns:getRootAtomTreePositions" />
+
+<xs:element name="getRootAtomTreePositionsResponse" type="tns:getRootAtomTreePositionsResponse" />
+
+<xs:element name="getRootCodeTreePositions" type="tns:getRootCodeTreePositions" />
+
+<xs:element name="getRootCodeTreePositionsResponse" type="tns:getRootCodeTreePositionsResponse" />
+
+<xs:element name="getRootSourceConceptTreePositions" type="tns:getRootSourceConceptTreePositions" />
+
+<xs:element name="getRootSourceConceptTreePositionsResponse" type="tns:getRootSourceConceptTreePositionsResponse" />
+
+<xs:element name="getRootSourceDescriptorTreePositions" type="tns:getRootSourceDescriptorTreePositions" />
+
+<xs:element name="getRootSourceDescriptorTreePositionsResponse" type="tns:getRootSourceDescriptorTreePositionsResponse" />
+
+<xs:element name="getSourceConcept" type="tns:getSourceConcept" />
+
+<xs:element name="getSourceConceptAtomRelations" type="tns:getSourceConceptAtomRelations" />
+
+<xs:element name="getSourceConceptAtomRelationsResponse" type="tns:getSourceConceptAtomRelationsResponse" />
+
+<xs:element name="getSourceConceptAtoms" type="tns:getSourceConceptAtoms" />
+
+<xs:element name="getSourceConceptAtomsResponse" type="tns:getSourceConceptAtomsResponse" />
+
+<xs:element name="getSourceConceptAttributes" type="tns:getSourceConceptAttributes" />
+
+<xs:element name="getSourceConceptAttributesResponse" type="tns:getSourceConceptAttributesResponse" />
+
+<xs:element name="getSourceConceptCodeRelations" type="tns:getSourceConceptCodeRelations" />
+
+<xs:element name="getSourceConceptCodeRelationsResponse" type="tns:getSourceConceptCodeRelationsResponse" />
+
+<xs:element name="getSourceConceptContentViewMemberAttributes" type="tns:getSourceConceptContentViewMemberAttributes" />
+
+<xs:element name="getSourceConceptContentViewMemberAttributesResponse" type="tns:getSourceConceptContentViewMemberAttributesResponse" />
+
+<xs:element name="getSourceConceptContentViewMemberships" type="tns:getSourceConceptContentViewMemberships" />
+
+<xs:element name="getSourceConceptContentViewMembershipsResponse" type="tns:getSourceConceptContentViewMembershipsResponse" />
+
+<xs:element name="getSourceConceptDefinitions" type="tns:getSourceConceptDefinitions" />
+
+<xs:element name="getSourceConceptDefinitionsResponse" type="tns:getSourceConceptDefinitionsResponse" />
+
+<xs:element name="getSourceConceptResponse" type="tns:getSourceConceptResponse" />
+
+<xs:element name="getSourceConceptSourceConceptRelations" type="tns:getSourceConceptSourceConceptRelations" />
+
+<xs:element name="getSourceConceptSourceConceptRelationsResponse" type="tns:getSourceConceptSourceConceptRelationsResponse" />
+
+<xs:element name="getSourceConceptSourceDescriptorRelations" type="tns:getSourceConceptSourceDescriptorRelations" />
+
+<xs:element name="getSourceConceptSourceDescriptorRelationsResponse" type="tns:getSourceConceptSourceDescriptorRelationsResponse" />
+
+<xs:element name="getSourceConceptSubsetMemberships" type="tns:getSourceConceptSubsetMemberships" />
+
+<xs:element name="getSourceConceptSubsetMembershipsResponse" type="tns:getSourceConceptSubsetMembershipsResponse" />
+
+<xs:element name="getSourceConceptTreePositionChildren" type="tns:getSourceConceptTreePositionChildren" />
+
+<xs:element name="getSourceConceptTreePositionChildrenResponse" type="tns:getSourceConceptTreePositionChildrenResponse" />
+
+<xs:element name="getSourceConceptTreePositionPathsToRoot" type="tns:getSourceConceptTreePositionPathsToRoot" />
+
+<xs:element name="getSourceConceptTreePositionPathsToRootResponse" type="tns:getSourceConceptTreePositionPathsToRootResponse" />
+
+<xs:element name="getSourceConceptTreePositionSiblings" type="tns:getSourceConceptTreePositionSiblings" />
+
+<xs:element name="getSourceConceptTreePositionSiblingsResponse" type="tns:getSourceConceptTreePositionSiblingsResponse" />
+
+<xs:element name="getSourceConceptTreePositions" type="tns:getSourceConceptTreePositions" />
+
+<xs:element name="getSourceConceptTreePositionsResponse" type="tns:getSourceConceptTreePositionsResponse" />
+
+<xs:element name="getSourceDescriptor" type="tns:getSourceDescriptor" />
+
+<xs:element name="getSourceDescriptorAtomRelations" type="tns:getSourceDescriptorAtomRelations" />
+
+<xs:element name="getSourceDescriptorAtomRelationsResponse" type="tns:getSourceDescriptorAtomRelationsResponse" />
+
+<xs:element name="getSourceDescriptorAtoms" type="tns:getSourceDescriptorAtoms" />
+
+<xs:element name="getSourceDescriptorAtomsResponse" type="tns:getSourceDescriptorAtomsResponse" />
+
+<xs:element name="getSourceDescriptorAttributes" type="tns:getSourceDescriptorAttributes" />
+
+<xs:element name="getSourceDescriptorAttributesResponse" type="tns:getSourceDescriptorAttributesResponse" />
+
+<xs:element name="getSourceDescriptorCodeRelations" type="tns:getSourceDescriptorCodeRelations" />
+
+<xs:element name="getSourceDescriptorCodeRelationsResponse" type="tns:getSourceDescriptorCodeRelationsResponse" />
+
+<xs:element name="getSourceDescriptorDefinitions" type="tns:getSourceDescriptorDefinitions" />
+
+<xs:element name="getSourceDescriptorDefinitionsResponse" type="tns:getSourceDescriptorDefinitionsResponse" />
+
+<xs:element name="getSourceDescriptorResponse" type="tns:getSourceDescriptorResponse" />
+
+<xs:element name="getSourceDescriptorSourceConceptRelations" type="tns:getSourceDescriptorSourceConceptRelations" />
+
+<xs:element name="getSourceDescriptorSourceConceptRelationsResponse" type="tns:getSourceDescriptorSourceConceptRelationsResponse" />
+
+<xs:element name="getSourceDescriptorSourceDescriptorRelations" type="tns:getSourceDescriptorSourceDescriptorRelations" />
+
+<xs:element name="getSourceDescriptorSourceDescriptorRelationsResponse" type="tns:getSourceDescriptorSourceDescriptorRelationsResponse" />
+
+<xs:element name="getSourceDescriptorTreePositionChildren" type="tns:getSourceDescriptorTreePositionChildren" />
+
+<xs:element name="getSourceDescriptorTreePositionChildrenResponse" type="tns:getSourceDescriptorTreePositionChildrenResponse" />
+
+<xs:element name="getSourceDescriptorTreePositionPathsToRoot" type="tns:getSourceDescriptorTreePositionPathsToRoot" />
+
+<xs:element name="getSourceDescriptorTreePositionPathsToRootResponse" type="tns:getSourceDescriptorTreePositionPathsToRootResponse" />
+
+<xs:element name="getSourceDescriptorTreePositionSiblings" type="tns:getSourceDescriptorTreePositionSiblings" />
+
+<xs:element name="getSourceDescriptorTreePositionSiblingsResponse" type="tns:getSourceDescriptorTreePositionSiblingsResponse" />
+
+<xs:element name="getSourceDescriptorTreePositions" type="tns:getSourceDescriptorTreePositions" />
+
+<xs:element name="getSourceDescriptorTreePositionsResponse" type="tns:getSourceDescriptorTreePositionsResponse" />
+
+<xs:element name="getSubset" type="tns:getSubset" />
+
+<xs:element name="getSubsetAtomMembers" type="tns:getSubsetAtomMembers" />
+
+<xs:element name="getSubsetAtomMembersResponse" type="tns:getSubsetAtomMembersResponse" />
+
+<xs:element name="getSubsetAttributes" type="tns:getSubsetAttributes" />
+
+<xs:element name="getSubsetAttributesResponse" type="tns:getSubsetAttributesResponse" />
+
+<xs:element name="getSubsetMemberAttributes" type="tns:getSubsetMemberAttributes" />
+
+<xs:element name="getSubsetMemberAttributesResponse" type="tns:getSubsetMemberAttributesResponse" />
+
+<xs:element name="getSubsetRelationMembers" type="tns:getSubsetRelationMembers" />
+
+<xs:element name="getSubsetRelationMembersResponse" type="tns:getSubsetRelationMembersResponse" />
+
+<xs:element name="getSubsetResponse" type="tns:getSubsetResponse" />
+
+<xs:element name="getSubsetSourceConceptMembers" type="tns:getSubsetSourceConceptMembers" />
+
+<xs:element name="getSubsetSourceConceptMembersResponse" type="tns:getSubsetSourceConceptMembersResponse" />
+
+<xs:element name="getSubsets" type="tns:getSubsets" />
+
+<xs:element name="getSubsetsResponse" type="tns:getSubsetsResponse" />
+
+<xs:element name="getTerm" type="tns:getTerm" />
+
+<xs:element name="getTermAtoms" type="tns:getTermAtoms" />
+
+<xs:element name="getTermAtomsResponse" type="tns:getTermAtomsResponse" />
+
+<xs:element name="getTermResponse" type="tns:getTermResponse" />
+
+<xs:element name="getTermString" type="tns:getTermString" />
+
+<xs:element name="getTermStringAtoms" type="tns:getTermStringAtoms" />
+
+<xs:element name="getTermStringAtomsResponse" type="tns:getTermStringAtomsResponse" />
+
+<xs:element name="getTermStringResponse" type="tns:getTermStringResponse" />
+
+<xs:element name="getTermStrings" type="tns:getTermStrings" />
+
+<xs:element name="getTermStringsResponse" type="tns:getTermStringsResponse" />
+
+<xs:element name="getVSSources" type="tns:getVSSources" />
+
+<xs:element name="getVSSourcesResponse" type="tns:getVSSourcesResponse" />
+
+<xs:element name="resolveVSAttributeDefinitionEntry" type="tns:resolveVSAttributeDefinitionEntry" />
+
+<xs:element name="resolveVSAttributeDefinitionEntryResponse" type="tns:resolveVSAttributeDefinitionEntryResponse" />
+
+<xs:element name="resolveVSCompleteSourceDefinitionEntry" type="tns:resolveVSCompleteSourceDefinitionEntry" />
+
+<xs:element name="resolveVSCompleteSourceDefinitionEntryResponse" type="tns:resolveVSCompleteSourceDefinitionEntryResponse" />
+
+<xs:element name="resolveVSCompleteValueSetDefinitionEntry" type="tns:resolveVSCompleteValueSetDefinitionEntry" />
+
+<xs:element name="resolveVSCompleteValueSetDefinitionEntryResponse" type="tns:resolveVSCompleteValueSetDefinitionEntryResponse" />
+
+<xs:element name="resolveVSDetailedAttributeDefinitionEntry" type="tns:resolveVSDetailedAttributeDefinitionEntry" />
+
+<xs:element name="resolveVSDetailedAttributeDefinitionEntryResponse" type="tns:resolveVSDetailedAttributeDefinitionEntryResponse" />
+
+<xs:element name="resolveVSDetailedCompleteSourceDefinitionEntry" type="tns:resolveVSDetailedCompleteSourceDefinitionEntry" />
+
+<xs:element name="resolveVSDetailedCompleteSourceDefinitionEntryResponse" type="tns:resolveVSDetailedCompleteSourceDefinitionEntryResponse" />
+
+<xs:element name="resolveVSDetailedCompleteValueSetDefinitionEntry" type="tns:resolveVSDetailedCompleteValueSetDefinitionEntry" />
+
+<xs:element name="resolveVSDetailedCompleteValueSetDefinitionEntryResponse" type="tns:resolveVSDetailedCompleteValueSetDefinitionEntryResponse" />
+
+<xs:element name="resolveVSDetailedExplicitListDefinitionEntry" type="tns:resolveVSDetailedExplicitListDefinitionEntry" />
+
+<xs:element name="resolveVSDetailedExplicitListDefinitionEntryResponse" type="tns:resolveVSDetailedExplicitListDefinitionEntryResponse" />
+
+<xs:element name="resolveVSDetailedRelationDefinitionEntry" type="tns:resolveVSDetailedRelationDefinitionEntry" />
+
+<xs:element name="resolveVSDetailedRelationDefinitionEntryResponse" type="tns:resolveVSDetailedRelationDefinitionEntryResponse" />
+
+<xs:element name="resolveVSExplicitListDefinitionEntry" type="tns:resolveVSExplicitListDefinitionEntry" />
+
+<xs:element name="resolveVSExplicitListDefinitionEntryResponse" type="tns:resolveVSExplicitListDefinitionEntryResponse" />
+
+<xs:element name="resolveVSHierarchicalValueSetDefinitionEntry" type="tns:resolveVSHierarchicalValueSetDefinitionEntry" />
+
+<xs:element name="resolveVSHierarchicalValueSetDefinitionEntryResponse" type="tns:resolveVSHierarchicalValueSetDefinitionEntryResponse" />
+
+<xs:element name="resolveVSRelationDefinitionEntry" type="tns:resolveVSRelationDefinitionEntry" />
+
+<xs:element name="resolveVSRelationDefinitionEntryResponse" type="tns:resolveVSRelationDefinitionEntryResponse" />
+
+<xs:element name="resolveValueSetDefinition" type="tns:resolveValueSetDefinition" />
+
+<xs:element name="resolveValueSetDefinitionResponse" type="tns:resolveValueSetDefinitionResponse" />
+
+<xs:complexType name="getContentView">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="contentViewId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contentViewDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="contentViewDTO">
+<xs:complexContent>
+<xs:extension base="tns:metathesaurusDataDTO">
+<xs:sequence>
+<xs:element name="algorithm" type="xs:string" minOccurs="0" />
+<xs:element name="atomMemberCount" type="xs:int" />
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="cascade" type="xs:boolean" />
+<xs:element name="category" type="xs:string" minOccurs="0" />
+<xs:element name="code" type="xs:long" />
+<xs:element name="conceptMemberCount" type="xs:int" />
+<xs:element name="contentViewClass" type="xs:string" minOccurs="0" />
+<xs:element name="contributor" type="xs:string" minOccurs="0" />
+<xs:element name="contributorDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="contributorURL" type="xs:string" minOccurs="0" />
+<xs:element name="contributorVersion" type="xs:string" minOccurs="0" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="generated" type="xs:boolean" />
+<xs:element name="includeObsolete" type="xs:boolean" />
+<xs:element name="maintainer" type="xs:string" minOccurs="0" />
+<xs:element name="maintainerDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="maintainerURL" type="xs:string" minOccurs="0" />
+<xs:element name="maintainerVersion" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="previousMeta" type="xs:string" minOccurs="0" />
+<xs:element name="relationMemberCount" type="xs:int" />
+<xs:element name="sourceConceptMemberCount" type="xs:int" />
+<xs:element name="subCategory" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="metathesaurusDataDTO">
+<xs:complexContent>
+<xs:extension base="tns:dataDTO">
+<xs:sequence>
+<xs:element name="suppressible" type="xs:boolean" />
+<xs:element name="ui" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="dataDTO">
+<xs:sequence>
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UtsFault">
+<xs:sequence>
+<xs:element name="faultInfo" type="xs:string" minOccurs="0" />
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSCompleteValueSetDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:completeValueSetDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="completeValueSetDefinitionEntryDTO">
+<xs:complexContent>
+<xs:extension base="tns:valueSetDefinitionDTO">
+<xs:sequence>
+<xs:element name="valueSet" type="tns:valueSetDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="valueSetDefinitionDTO">
+<xs:complexContent>
+<xs:extension base="tns:dataDTO">
+<xs:sequence>
+<xs:element name="operator" type="xs:string" minOccurs="0" />
+<xs:element name="sourceui" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="valueSetDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="definitionEntryCount" type="xs:int" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="dynamicallyBound" type="xs:boolean" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="purpose" type="xs:string" minOccurs="0" />
+<xs:element name="sourceAtomClusterMemberCount" type="xs:int" />
+<xs:element name="uri" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="sourceDataDTO">
+<xs:complexContent>
+<xs:extension base="tns:metathesaurusDataDTO">
+<xs:sequence>
+<xs:element name="literal" type="xs:boolean" />
+<xs:element name="obsolete" type="xs:boolean" />
+<xs:element name="rootSource" type="xs:string" minOccurs="0" />
+<xs:element name="sourceOriginated" type="xs:boolean" />
+<xs:element name="sourceUi" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="psf">
+<xs:sequence>
+<xs:element name="caseSensitive" type="xs:boolean" minOccurs="0" />
+<xs:element name="includeObsolete" type="xs:boolean" minOccurs="0" />
+<xs:element name="includeSuppressible" type="xs:boolean" minOccurs="0" />
+<xs:element name="includedAdditionalRelationLabels" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedAttributeNames" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedLanguage" type="xs:string" minOccurs="0" />
+<xs:element name="includedRelationLabels" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedSources" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedTermTypes" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedWords" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="pageLn" type="xs:int" />
+<xs:element name="pageNum" type="xs:int" />
+<xs:element name="paging" type="xs:int" />
+<xs:element name="sortBy" type="xs:string" minOccurs="0" />
+<xs:element name="sortOrderAscending" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSCompleteValueSetDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vsCodeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vsCodeDTO">
+<xs:sequence>
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="defaultPreferredName" type="xs:string" minOccurs="0" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+<xs:element name="release" type="xs:string" minOccurs="0" />
+<xs:element name="rootSource" type="xs:string" minOccurs="0" />
+<xs:element name="sourceUi" type="xs:string" minOccurs="0" />
+<xs:element name="subType" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationContentViewMemberships">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="relationId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationContentViewMembershipsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contentViewDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptTreePositionPathsToRoot">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptTreePositionPathsToRootResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionPathDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceAtomClusterTreePositionPathDTO">
+<xs:sequence>
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="treePositions" type="tns:sourceAtomClusterTreePositionDTO" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceAtomClusterTreePositionDTO">
+<xs:complexContent>
+<xs:extension base="tns:treePositionDTO">
+<xs:sequence>
+<xs:element name="cluster" type="tns:sourceAtomClusterDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="treePositionDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="additionalRelationLabel" type="xs:string" minOccurs="0" />
+<xs:element name="childCount" type="xs:int" />
+<xs:element name="defaultPreferredName" type="xs:string" minOccurs="0" />
+<xs:element name="pathsToRootCount" type="xs:int" />
+<xs:element name="siblingCount" type="xs:int" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="sourceAtomClusterDTO">
+<xs:complexContent>
+<xs:extension base="tns:atomClusterDTO">
+<xs:sequence>
+<xs:element name="atomCount" type="xs:int" />
+<xs:element name="atomRelationCount" type="xs:int" />
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="codeRelationCount" type="xs:int" />
+<xs:element name="definitionCount" type="xs:int" />
+<xs:element name="literal" type="xs:boolean" />
+<xs:element name="obsolete" type="xs:boolean" />
+<xs:element name="rootSource" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptRelationCount" type="xs:int" />
+<xs:element name="sourceDescriptorRelationCount" type="xs:int" />
+<xs:element name="sourceOriginated" type="xs:boolean" />
+<xs:element name="sourceUi" type="xs:string" minOccurs="0" />
+<xs:element name="subType" type="xs:string" minOccurs="0" />
+<xs:element name="subsetMemberCount" type="xs:int" />
+<xs:element name="treePositionCount" type="xs:int" />
+<xs:element name="cVMemberCount" type="xs:int" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="atomClusterDTO">
+<xs:complexContent>
+<xs:extension base="tns:metathesaurusDataDTO">
+<xs:sequence>
+<xs:element name="defaultPreferredName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getSubsets">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subsetDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subsetDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="atomMemberCount" type="xs:int" />
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="relationMemberCount" type="xs:int" />
+<xs:element name="sourceConceptMemberCount" type="xs:int" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptor">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceDescriptorId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewAtomMembers">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="contentViewId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewAtomMembersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomContentViewMemberDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atomContentViewMemberDTO">
+<xs:complexContent>
+<xs:extension base="tns:contentViewMemberDTO">
+<xs:sequence>
+<xs:element name="atom" type="tns:atomDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="contentViewMemberDTO">
+<xs:complexContent>
+<xs:extension base="tns:metathesaurusDataDTO">
+<xs:sequence>
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="contentViewHandle" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="atomDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="atomRelationCount" type="xs:int" />
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="cocCount" type="xs:int" />
+<xs:element name="code" type="tns:sourceAtomClusterDTO" minOccurs="0" />
+<xs:element name="codeRelationCount" type="xs:int" />
+<xs:element name="concept" type="tns:conceptDTO" minOccurs="0" />
+<xs:element name="conceptRelationCount" type="xs:int" />
+<xs:element name="cooccurrenceCount" type="xs:int" />
+<xs:element name="cvMemberCount" type="xs:int" />
+<xs:element name="definitionCount" type="xs:int" />
+<xs:element name="relationCount" type="xs:int" />
+<xs:element name="sourceConcept" type="tns:sourceAtomClusterDTO" minOccurs="0" />
+<xs:element name="sourceConceptRelationCount" type="xs:int" />
+<xs:element name="sourceDescriptor" type="tns:sourceAtomClusterDTO" minOccurs="0" />
+<xs:element name="sourceDescriptorRelationCount" type="xs:int" />
+<xs:element name="subsetMemberCount" type="xs:int" />
+<xs:element name="termString" type="tns:termStringDTO" minOccurs="0" />
+<xs:element name="termType" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionCount" type="xs:int" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="conceptDTO">
+<xs:complexContent>
+<xs:extension base="tns:atomClusterDTO">
+<xs:sequence>
+<xs:element name="atomCount" type="xs:int" />
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="cvMemberCount" type="xs:int" />
+<xs:element name="dateAdded" type="xs:dateTime" minOccurs="0" />
+<xs:element name="definitionsCount" type="xs:int" />
+<xs:element name="majorRevisionDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="relationCount" type="xs:int" />
+<xs:element name="semanticTypes" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="status" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="termStringDTO">
+<xs:complexContent>
+<xs:extension base="tns:atomClusterDTO">
+<xs:sequence>
+<xs:element name="atomCount" type="xs:int" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="term" type="tns:termDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="termDTO">
+<xs:complexContent>
+<xs:extension base="tns:atomClusterDTO">
+<xs:sequence>
+<xs:element name="atomCount" type="xs:int" />
+<xs:element name="language" type="xs:string" minOccurs="0" />
+<xs:element name="luinormForm" type="xs:string" minOccurs="0" />
+<xs:element name="normForm" type="xs:string" minOccurs="0" />
+<xs:element name="termStringCount" type="xs:int" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptAtoms">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptAtomsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorCodeRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceDescriptorId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorCodeRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atomClusterRelationDTO">
+<xs:complexContent>
+<xs:extension base="tns:relationDTO">
+<xs:sequence>
+<xs:element name="relatedAtomCluster" type="tns:atomClusterDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="relationDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="additionalRelationLabel" type="xs:string" minOccurs="0" />
+<xs:element name="assertedDirection" type="xs:boolean" />
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="cvMemberCount" type="xs:int" />
+<xs:element name="fromSType" type="xs:string" minOccurs="0" />
+<xs:element name="groupId" type="xs:string" minOccurs="0" />
+<xs:element name="relatedCUI" type="xs:string" minOccurs="0" />
+<xs:element name="relationCount" type="xs:int" />
+<xs:element name="relationLabel" type="xs:string" minOccurs="0" />
+<xs:element name="subsetMemberCount" type="xs:int" />
+<xs:element name="toSType" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getSubsetMemberAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="subsetMemberId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetMemberAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="attributeDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="relationCount" type="xs:int" />
+<xs:element name="value" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getVSSources">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getVSSourcesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorTreePositions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceDescriptorId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorTreePositionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptSourceConceptRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptSourceConceptRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeAtoms">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="codeId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeAtomsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomCooccurrences">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomCooccurrencesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomCooccurrenceDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atomCooccurrenceDTO">
+<xs:complexContent>
+<xs:extension base="tns:dataDTO">
+<xs:sequence>
+<xs:element name="frequency" type="xs:long" />
+<xs:element name="relatedAtom" type="tns:atomDTO" minOccurs="0" />
+<xs:element name="subheadingCount" type="xs:int" />
+<xs:element name="type" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getAtomTreePositionPathsToRoot">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomTreePositionPathsToRootResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomTreePositionPathDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atomTreePositionPathDTO">
+<xs:sequence>
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="treePositions" type="tns:atomTreePositionDTO" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atomTreePositionDTO">
+<xs:complexContent>
+<xs:extension base="tns:treePositionDTO">
+<xs:sequence>
+<xs:element name="atom" type="tns:atomDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getCode">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="codeId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourceConceptTreePositions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourceConceptTreePositionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeCodeRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="codeId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeCodeRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootAtomTreePositions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootAtomTreePositionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermAtoms">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermAtomsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetSourceConceptMembers">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="subsetId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetSourceConceptMembersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceConceptSubsetMemberDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceConceptSubsetMemberDTO">
+<xs:complexContent>
+<xs:extension base="tns:subsetMemberDTO">
+<xs:sequence>
+<xs:element name="sourceConcept" type="tns:sourceAtomClusterDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="subsetMemberDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="subsetHandle" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getCodeSourceConceptRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="codeId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeSourceConceptRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptAtoms">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptAtomsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptContentViewMemberAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="contentViewMemberId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptContentViewMemberAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptContentViewMemberships">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptContentViewMembershipsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contentViewDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMapObjectAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="mapObjectId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMapObjectAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeTreePositions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="codeId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeTreePositionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomTreePositionSiblings">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomTreePositionSiblingsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorTreePositionSiblings">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorTreePositionSiblingsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermStringAtoms">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termStringId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermStringAtomsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNewConcepts">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNewConceptsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conceptDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTerm">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:termDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedCompleteSourceDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:completeSourceDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="completeSourceDefinitionEntryDTO">
+<xs:complexContent>
+<xs:extension base="tns:valueSetDefinitionDTO">
+<xs:sequence />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedCompleteSourceDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomAtomRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomAtomRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atomRelationDTO">
+<xs:complexContent>
+<xs:extension base="tns:relationDTO">
+<xs:sequence>
+<xs:element name="relatedAtom" type="tns:atomDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getContentViewConceptMembers">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="contentViewId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewConceptMembersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conceptContentViewMemberDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="conceptContentViewMemberDTO">
+<xs:complexContent>
+<xs:extension base="tns:contentViewMemberDTO">
+<xs:sequence />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getConcept">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conceptDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptAtomRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptAtomRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomDefinitions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomDefinitionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:definitionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="definitionDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="relationCount" type="xs:int" />
+<xs:element name="value" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorDefinitions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceDescriptor" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorDefinitionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:definitionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCooccurrenceSubheadingFrequencies">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="cooccurrenceId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCooccurrenceSubheadingFrequenciesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subheadingFrequencyDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subheadingFrequencyDTO">
+<xs:sequence>
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="frequency" type="xs:string" minOccurs="0" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+<xs:element name="subheadingName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeTreePositionSiblings">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeTreePositionSiblingsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedRelationDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:relationDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="relationDefinitionEntryDTO">
+<xs:complexContent>
+<xs:extension base="tns:valueSetDefinitionDTO">
+<xs:sequence>
+<xs:element name="additionalRelationLabel" type="xs:string" minOccurs="0" />
+<xs:element name="forwardDirection" type="xs:boolean" />
+<xs:element name="leafOnly" type="xs:boolean" />
+<xs:element name="relationLabel" type="xs:string" minOccurs="0" />
+<xs:element name="transitive" type="xs:boolean" />
+<xs:element name="ui" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedRelationDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomTreePositionChildren">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomTreePositionChildrenResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootCodeTreePositions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootCodeTreePositionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNewConceptsCount">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNewConceptsCountResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomTreePositions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomTreePositionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptSourceDescriptorRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptSourceDescriptorRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptContentViewMemberships">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptContentViewMembershipsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contentViewDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="relationId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:relationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorSourceDescriptorRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceDescriptorId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorSourceDescriptorRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptTreePositions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptTreePositionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptCodeRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptCodeRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSExplicitListDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:explicitListDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="explicitListDefinitionEntryDTO">
+<xs:complexContent>
+<xs:extension base="tns:valueSetDefinitionDTO">
+<xs:sequence>
+<xs:element name="vsCodes" type="tns:vsCodeDTO" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="resolveVSExplicitListDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vsCodeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeDefinitions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="code" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeDefinitionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:definitionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="subsetId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSAttributeDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:attributeDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="attributeDefinitionEntryDTO">
+<xs:complexContent>
+<xs:extension base="tns:valueSetDefinitionDTO">
+<xs:sequence>
+<xs:element name="atn" type="xs:string" minOccurs="0" />
+<xs:element name="matchText" type="xs:string" minOccurs="0" />
+<xs:element name="matchType" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="resolveVSAttributeDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vsCodeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSCompleteSourceDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:completeSourceDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSCompleteSourceDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vsCodeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMappings">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="mapsetId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMappingsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:mappingDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mappingDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="additionalLabel" type="xs:string" minOccurs="0" />
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="label" type="xs:string" minOccurs="0" />
+<xs:element name="mapFrom" type="tns:mapObjectDTO" minOccurs="0" />
+<xs:element name="mapSetHandle" type="xs:string" minOccurs="0" />
+<xs:element name="mapTo" type="tns:mapObjectDTO" minOccurs="0" />
+<xs:element name="rank" type="xs:string" minOccurs="0" />
+<xs:element name="restriction" type="xs:string" minOccurs="0" />
+<xs:element name="rule" type="xs:string" minOccurs="0" />
+<xs:element name="subsetId" type="xs:string" minOccurs="0" />
+<xs:element name="type" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="mapObjectDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="expression" type="xs:string" minOccurs="0" />
+<xs:element name="restriction" type="xs:string" minOccurs="0" />
+<xs:element name="rule" type="xs:string" minOccurs="0" />
+<xs:element name="type" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getAtomSubsetMemberships">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomSubsetMembershipsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subsetDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConcept">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedCompleteValueSetDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:completeValueSetDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedCompleteValueSetDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptTreePositionSiblings">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptTreePositionSiblingsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewSourceConceptMembers">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="contentViewId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewSourceConceptMembersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceConceptContentViewMemberDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceConceptContentViewMemberDTO">
+<xs:complexContent>
+<xs:extension base="tns:contentViewMemberDTO">
+<xs:sequence>
+<xs:element name="sourceConcept" type="tns:sourceAtomClusterDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getConceptDefinitions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptDefinitionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:definitionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptTreePositionChildren">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptTreePositionChildrenResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDefinitionAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="definitionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDefinitionAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomContentViewMemberships">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomContentViewMembershipsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contentViewDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptAtomRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptAtomRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptSubsetMemberships">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptSubsetMembershipsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subsetDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomSourceDescriptorRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomSourceDescriptorRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtom">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeTreePositionChildren">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeTreePositionChildrenResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMapObjectFromMapping">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="mapObjectId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMapObjectFromMappingResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:mappingDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorAtomRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceDescriptorId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorAtomRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewRelationMembers">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="contentViewId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewRelationMembersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:relationContentViewMemberDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="relationContentViewMemberDTO">
+<xs:complexContent>
+<xs:extension base="tns:contentViewMemberDTO">
+<xs:sequence>
+<xs:element name="relation" type="tns:relationDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedAttributeDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:attributeDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedAttributeDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeAtomRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="codeId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeAtomRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomSourceConceptRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomSourceConceptRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveValueSetDefinition">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entries" type="tns:valueSetDefinitionDTO" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveValueSetDefinitionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vsCodeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationSubsetMemberships">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="relationId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationSubsetMembershipsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subsetDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorTreePositionChildren">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorTreePositionChildrenResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMapSetAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="mapsetId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMapSetAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermString">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termStringId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermStringResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:termStringDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomContentViewMemberAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="contentViewMemberId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomContentViewMemberAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedExplicitListDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:explicitListDetailedDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="explicitListDetailedDefinitionEntryDTO">
+<xs:complexContent>
+<xs:extension base="tns:valueSetDefinitionDTO">
+<xs:sequence>
+<xs:element name="sourceAtomClusters" type="tns:sourceAtomClusterDTO" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="resolveVSDetailedExplicitListDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermStrings">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermStringsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:termStringDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceDescriptorId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewMemberAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="contentViewMemberId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewMemberAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptConceptRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptConceptRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conceptRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="conceptRelationDTO">
+<xs:complexContent>
+<xs:extension base="tns:relationDTO">
+<xs:sequence>
+<xs:element name="relatedConcept" type="tns:conceptDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getContentViewAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="contentViewId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptDefinitions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceConcept" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceConceptDefinitionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:definitionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeSourceDescriptorRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="codeId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeSourceDescriptorRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViews">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentViewsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contentViewDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubset">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="subsetId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subsetDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="relationId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMappingAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="mappingId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMappingAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeTreePositionPathsToRoot">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeTreePositionPathsToRootResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionPathDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDefaultPreferredAtom">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomClusterId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDefaultPreferredAtomResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetAtomMembers">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="subsetId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetAtomMembersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomSubsetMemberDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atomSubsetMemberDTO">
+<xs:complexContent>
+<xs:extension base="tns:subsetMemberDTO">
+<xs:sequence>
+<xs:element name="atom" type="tns:atomDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getMapsets">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMapsetsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:mapsetDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mapsetDTO">
+<xs:complexContent>
+<xs:extension base="tns:sourceDataDTO">
+<xs:sequence>
+<xs:element name="attributeCount" type="xs:int" />
+<xs:element name="complexity" type="xs:string" minOccurs="0" />
+<xs:element name="fromComplexity" type="xs:string" minOccurs="0" />
+<xs:element name="fromExhaustive" type="xs:string" minOccurs="0" />
+<xs:element name="fromRootSource" type="xs:string" minOccurs="0" />
+<xs:element name="fromSource" type="xs:string" minOccurs="0" />
+<xs:element name="mappingCount" type="xs:int" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="separatorCode" type="xs:string" minOccurs="0" />
+<xs:element name="toComplexity" type="xs:string" minOccurs="0" />
+<xs:element name="toExhaustive" type="xs:string" minOccurs="0" />
+<xs:element name="toNullObject" type="tns:mapObjectDTO" minOccurs="0" />
+<xs:element name="toRootSource" type="xs:string" minOccurs="0" />
+<xs:element name="toSource" type="xs:string" minOccurs="0" />
+<xs:element name="type" type="xs:string" minOccurs="0" />
+<xs:element name="umlsSeparator" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorAtoms">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceDescriptorId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorAtomsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomConceptRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomConceptRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetRelationMembers">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="subsetId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetRelationMembersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:relationSubsetMemberDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="relationSubsetMemberDTO">
+<xs:complexContent>
+<xs:extension base="tns:subsetMemberDTO">
+<xs:sequence>
+<xs:element name="relation" type="tns:relationDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorSourceConceptRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="sourceDescriptorId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorSourceConceptRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSRelationDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:relationDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSRelationDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vsCodeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorTreePositionPathsToRoot">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="treePositionId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceDescriptorTreePositionPathsToRootResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionPathDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMapObjectToMapping">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="mapObjectId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMapObjectToMappingResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:mappingDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourceDescriptorTreePositions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourceDescriptorTreePositionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomClusterTreePositionDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomCodeRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomCodeRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomClusterRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSHierarchicalValueSetDefinitionEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="entry" type="tns:relationDefinitionEntryDTO" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resolveVSHierarchicalValueSetDefinitionEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vsCodeDetailedDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vsCodeDetailedDTO">
+<xs:complexContent>
+<xs:extension base="tns:vsCodeDTO">
+<xs:sequence>
+<xs:element name="rel" type="xs:string" minOccurs="0" />
+<xs:element name="rela" type="xs:string" minOccurs="0" />
+<xs:element name="rels" type="tns:vsCodeDetailedDTO" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getCodeAttributes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="codeId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodeAttributesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.8 svn-revision#13980. --><xs:schema xmlns:tns="http://webservice.uts.umls.nlm.nih.gov/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.uts.umls.nlm.nih.gov/">
+
+<xs:element name="UtsFault" type="tns:UtsFault" />
+
+<xs:element name="findAtoms" type="tns:findAtoms" />
+
+<xs:element name="findAtomsResponse" type="tns:findAtomsResponse" />
+
+<xs:element name="findCodes" type="tns:findCodes" />
+
+<xs:element name="findCodesResponse" type="tns:findCodesResponse" />
+
+<xs:element name="findConcepts" type="tns:findConcepts" />
+
+<xs:element name="findConceptsResponse" type="tns:findConceptsResponse" />
+
+<xs:element name="findSourceConcepts" type="tns:findSourceConcepts" />
+
+<xs:element name="findSourceConceptsResponse" type="tns:findSourceConceptsResponse" />
+
+<xs:element name="findSourceDescriptors" type="tns:findSourceDescriptors" />
+
+<xs:element name="findSourceDescriptorsResponse" type="tns:findSourceDescriptorsResponse" />
+
+<xs:element name="getCount" type="tns:getCount" />
+
+<xs:element name="getCountResponse" type="tns:getCountResponse" />
+
+<xs:complexType name="findSourceDescriptors">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="target" type="xs:string" minOccurs="0" />
+<xs:element name="string" type="xs:string" minOccurs="0" />
+<xs:element name="searchType" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="psf">
+<xs:sequence>
+<xs:element name="caseSensitive" type="xs:boolean" minOccurs="0" />
+<xs:element name="includeObsolete" type="xs:boolean" minOccurs="0" />
+<xs:element name="includeSuppressible" type="xs:boolean" minOccurs="0" />
+<xs:element name="includedAdditionalRelationLabels" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedAttributeNames" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedLanguage" type="xs:string" minOccurs="0" />
+<xs:element name="includedRelationLabels" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedSources" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedTermTypes" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="includedWords" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="pageLn" type="xs:int" />
+<xs:element name="pageNum" type="xs:int" />
+<xs:element name="paging" type="xs:int" />
+<xs:element name="sortBy" type="xs:string" minOccurs="0" />
+<xs:element name="sortOrderAscending" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSourceDescriptorsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:uiLabelRootSource" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uiLabelRootSource">
+<xs:sequence>
+<xs:element name="label" type="xs:string" minOccurs="0" />
+<xs:element name="rootSource" type="xs:string" minOccurs="0" />
+<xs:element name="ui" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UtsFault">
+<xs:sequence>
+<xs:element name="faultInfo" type="xs:string" minOccurs="0" />
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAtoms">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="target" type="xs:string" minOccurs="0" />
+<xs:element name="string" type="xs:string" minOccurs="0" />
+<xs:element name="searchType" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAtomsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:uiLabel" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uiLabel">
+<xs:sequence>
+<xs:element name="label" type="xs:string" minOccurs="0" />
+<xs:element name="ui" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCodes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="target" type="xs:string" minOccurs="0" />
+<xs:element name="string" type="xs:string" minOccurs="0" />
+<xs:element name="searchType" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCodesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:uiLabelRootSource" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCount">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="returnType" type="xs:string" minOccurs="0" />
+<xs:element name="target" type="xs:string" minOccurs="0" />
+<xs:element name="string" type="xs:string" minOccurs="0" />
+<xs:element name="searchType" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCountResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConcepts">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="target" type="xs:string" minOccurs="0" />
+<xs:element name="string" type="xs:string" minOccurs="0" />
+<xs:element name="searchType" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:uiLabel" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSourceConcepts">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="target" type="xs:string" minOccurs="0" />
+<xs:element name="string" type="xs:string" minOccurs="0" />
+<xs:element name="searchType" type="xs:string" minOccurs="0" />
+<xs:element name="psf" type="tns:psf" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSourceConceptsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:uiLabelRootSource" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

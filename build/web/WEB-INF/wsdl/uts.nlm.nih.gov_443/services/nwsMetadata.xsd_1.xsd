@@ -1,0 +1,1124 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.8 svn-revision#13980. --><xs:schema xmlns:tns="http://webservice.uts.umls.nlm.nih.gov/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.uts.umls.nlm.nih.gov/">
+
+<xs:element name="UtsFault" type="tns:UtsFault" />
+
+<xs:element name="getAcquisitionContactInformation" type="tns:getAcquisitionContactInformation" />
+
+<xs:element name="getAcquisitionContactInformationResponse" type="tns:getAcquisitionContactInformationResponse" />
+
+<xs:element name="getAdditionalRelationLabel" type="tns:getAdditionalRelationLabel" />
+
+<xs:element name="getAdditionalRelationLabelResponse" type="tns:getAdditionalRelationLabelResponse" />
+
+<xs:element name="getAllAdditionalRelationLabels" type="tns:getAllAdditionalRelationLabels" />
+
+<xs:element name="getAllAdditionalRelationLabelsResponse" type="tns:getAllAdditionalRelationLabelsResponse" />
+
+<xs:element name="getAllAttributeNames" type="tns:getAllAttributeNames" />
+
+<xs:element name="getAllAttributeNamesResponse" type="tns:getAllAttributeNamesResponse" />
+
+<xs:element name="getAllCharacterSets" type="tns:getAllCharacterSets" />
+
+<xs:element name="getAllCharacterSetsResponse" type="tns:getAllCharacterSetsResponse" />
+
+<xs:element name="getAllCooccurrenceTypes" type="tns:getAllCooccurrenceTypes" />
+
+<xs:element name="getAllCooccurrenceTypesResponse" type="tns:getAllCooccurrenceTypesResponse" />
+
+<xs:element name="getAllEquivalentAttributeNames" type="tns:getAllEquivalentAttributeNames" />
+
+<xs:element name="getAllEquivalentAttributeNamesResponse" type="tns:getAllEquivalentAttributeNamesResponse" />
+
+<xs:element name="getAllLanguages" type="tns:getAllLanguages" />
+
+<xs:element name="getAllLanguagesResponse" type="tns:getAllLanguagesResponse" />
+
+<xs:element name="getAllRelationLabels" type="tns:getAllRelationLabels" />
+
+<xs:element name="getAllRelationLabelsResponse" type="tns:getAllRelationLabelsResponse" />
+
+<xs:element name="getAllRootSourceFamilies" type="tns:getAllRootSourceFamilies" />
+
+<xs:element name="getAllRootSourceFamiliesResponse" type="tns:getAllRootSourceFamiliesResponse" />
+
+<xs:element name="getAllRootSources" type="tns:getAllRootSources" />
+
+<xs:element name="getAllRootSourcesResponse" type="tns:getAllRootSourcesResponse" />
+
+<xs:element name="getAllSourceAttributeNames" type="tns:getAllSourceAttributeNames" />
+
+<xs:element name="getAllSourceAttributeNamesResponse" type="tns:getAllSourceAttributeNamesResponse" />
+
+<xs:element name="getAllSourceCitations" type="tns:getAllSourceCitations" />
+
+<xs:element name="getAllSourceCitationsResponse" type="tns:getAllSourceCitationsResponse" />
+
+<xs:element name="getAllSourceRelationLabels" type="tns:getAllSourceRelationLabels" />
+
+<xs:element name="getAllSourceRelationLabelsResponse" type="tns:getAllSourceRelationLabelsResponse" />
+
+<xs:element name="getAllSourceTermTypes" type="tns:getAllSourceTermTypes" />
+
+<xs:element name="getAllSourceTermTypesResponse" type="tns:getAllSourceTermTypesResponse" />
+
+<xs:element name="getAllSources" type="tns:getAllSources" />
+
+<xs:element name="getAllSourcesResponse" type="tns:getAllSourcesResponse" />
+
+<xs:element name="getAllSubheadings" type="tns:getAllSubheadings" />
+
+<xs:element name="getAllSubheadingsResponse" type="tns:getAllSubheadingsResponse" />
+
+<xs:element name="getAllSuperAttributeNames" type="tns:getAllSuperAttributeNames" />
+
+<xs:element name="getAllSuperAttributeNamesResponse" type="tns:getAllSuperAttributeNamesResponse" />
+
+<xs:element name="getAllTermTypes" type="tns:getAllTermTypes" />
+
+<xs:element name="getAllTermTypesResponse" type="tns:getAllTermTypesResponse" />
+
+<xs:element name="getAllUMLSVersions" type="tns:getAllUMLSVersions" />
+
+<xs:element name="getAllUMLSVersionsResponse" type="tns:getAllUMLSVersionsResponse" />
+
+<xs:element name="getAttributeName" type="tns:getAttributeName" />
+
+<xs:element name="getAttributeNameResponse" type="tns:getAttributeNameResponse" />
+
+<xs:element name="getCharacterSet" type="tns:getCharacterSet" />
+
+<xs:element name="getCharacterSetResponse" type="tns:getCharacterSetResponse" />
+
+<xs:element name="getContentContactInformation" type="tns:getContentContactInformation" />
+
+<xs:element name="getContentContactInformationResponse" type="tns:getContentContactInformationResponse" />
+
+<xs:element name="getCooccurrenceType" type="tns:getCooccurrenceType" />
+
+<xs:element name="getCooccurrenceTypeResponse" type="tns:getCooccurrenceTypeResponse" />
+
+<xs:element name="getCurrentUMLSVersion" type="tns:getCurrentUMLSVersion" />
+
+<xs:element name="getCurrentUMLSVersionResponse" type="tns:getCurrentUMLSVersionResponse" />
+
+<xs:element name="getCurrentVersionSource" type="tns:getCurrentVersionSource" />
+
+<xs:element name="getCurrentVersionSourceResponse" type="tns:getCurrentVersionSourceResponse" />
+
+<xs:element name="getGeneralMetadataEntry" type="tns:getGeneralMetadataEntry" />
+
+<xs:element name="getGeneralMetadataEntryResponse" type="tns:getGeneralMetadataEntryResponse" />
+
+<xs:element name="getIdentifierType" type="tns:getIdentifierType" />
+
+<xs:element name="getIdentifierTypeResponse" type="tns:getIdentifierTypeResponse" />
+
+<xs:element name="getLanguage" type="tns:getLanguage" />
+
+<xs:element name="getLanguageResponse" type="tns:getLanguageResponse" />
+
+<xs:element name="getLicenseContactInformation" type="tns:getLicenseContactInformation" />
+
+<xs:element name="getLicenseContactInformationResponse" type="tns:getLicenseContactInformationResponse" />
+
+<xs:element name="getRelationLabel" type="tns:getRelationLabel" />
+
+<xs:element name="getRelationLabelResponse" type="tns:getRelationLabelResponse" />
+
+<xs:element name="getRootSource" type="tns:getRootSource" />
+
+<xs:element name="getRootSourceResponse" type="tns:getRootSourceResponse" />
+
+<xs:element name="getRootSourceSynonymousNames" type="tns:getRootSourceSynonymousNames" />
+
+<xs:element name="getRootSourceSynonymousNamesResponse" type="tns:getRootSourceSynonymousNamesResponse" />
+
+<xs:element name="getRootSourcesByFamily" type="tns:getRootSourcesByFamily" />
+
+<xs:element name="getRootSourcesByFamilyResponse" type="tns:getRootSourcesByFamilyResponse" />
+
+<xs:element name="getRootSourcesByLanguage" type="tns:getRootSourcesByLanguage" />
+
+<xs:element name="getRootSourcesByLanguageResponse" type="tns:getRootSourcesByLanguageResponse" />
+
+<xs:element name="getRootSourcesByRestrictionLevel" type="tns:getRootSourcesByRestrictionLevel" />
+
+<xs:element name="getRootSourcesByRestrictionLevelResponse" type="tns:getRootSourcesByRestrictionLevelResponse" />
+
+<xs:element name="getSource" type="tns:getSource" />
+
+<xs:element name="getSourceAttributeName" type="tns:getSourceAttributeName" />
+
+<xs:element name="getSourceAttributeNameResponse" type="tns:getSourceAttributeNameResponse" />
+
+<xs:element name="getSourceAttributeNames" type="tns:getSourceAttributeNames" />
+
+<xs:element name="getSourceAttributeNamesResponse" type="tns:getSourceAttributeNamesResponse" />
+
+<xs:element name="getSourceCitation" type="tns:getSourceCitation" />
+
+<xs:element name="getSourceCitationResponse" type="tns:getSourceCitationResponse" />
+
+<xs:element name="getSourceRelationLabel" type="tns:getSourceRelationLabel" />
+
+<xs:element name="getSourceRelationLabelResponse" type="tns:getSourceRelationLabelResponse" />
+
+<xs:element name="getSourceRelationLabels" type="tns:getSourceRelationLabels" />
+
+<xs:element name="getSourceRelationLabelsResponse" type="tns:getSourceRelationLabelsResponse" />
+
+<xs:element name="getSourceResponse" type="tns:getSourceResponse" />
+
+<xs:element name="getSourceTermType" type="tns:getSourceTermType" />
+
+<xs:element name="getSourceTermTypeResponse" type="tns:getSourceTermTypeResponse" />
+
+<xs:element name="getSourceTermTypes" type="tns:getSourceTermTypes" />
+
+<xs:element name="getSourceTermTypesResponse" type="tns:getSourceTermTypesResponse" />
+
+<xs:element name="getSubEquivalentAttributeNames" type="tns:getSubEquivalentAttributeNames" />
+
+<xs:element name="getSubEquivalentAttributeNamesResponse" type="tns:getSubEquivalentAttributeNamesResponse" />
+
+<xs:element name="getSubheading" type="tns:getSubheading" />
+
+<xs:element name="getSubheadingResponse" type="tns:getSubheadingResponse" />
+
+<xs:element name="getTermType" type="tns:getTermType" />
+
+<xs:element name="getTermTypeResponse" type="tns:getTermTypeResponse" />
+
+<xs:element name="getUpdatedSourcesByVersion" type="tns:getUpdatedSourcesByVersion" />
+
+<xs:element name="getUpdatedSourcesByVersionResponse" type="tns:getUpdatedSourcesByVersionResponse" />
+
+<xs:element name="getVersionedSources" type="tns:getVersionedSources" />
+
+<xs:element name="getVersionedSourcesResponse" type="tns:getVersionedSourcesResponse" />
+
+<xs:complexType name="getSourceAttributeName">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="attributeName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceAttributeNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAttributeNameDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceAttributeNameDTO">
+<xs:sequence>
+<xs:element name="attributeName" type="tns:attributeNameDTO" minOccurs="0" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="domainId" type="xs:string" minOccurs="0" />
+<xs:element name="functional" type="xs:boolean" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+<xs:element name="literal" type="xs:boolean" />
+<xs:element name="origValue" type="xs:string" minOccurs="0" />
+<xs:element name="rootSource" type="tns:rootSourceDTO" minOccurs="0" />
+<xs:element name="sourceOriginated" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="attributeNameDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="validDTO">
+<xs:sequence>
+<xs:element name="abbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="expandedForm" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rootSourceDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence>
+<xs:element name="acquisitionContact" type="tns:contactInformationDTO" minOccurs="0" />
+<xs:element name="contentContact" type="tns:contactInformationDTO" minOccurs="0" />
+<xs:element name="contextType" type="xs:string" minOccurs="0" />
+<xs:element name="family" type="xs:string" minOccurs="0" />
+<xs:element name="hierarchicalName" type="xs:string" minOccurs="0" />
+<xs:element name="language" type="tns:languageDTO" minOccurs="0" />
+<xs:element name="licenseContact" type="tns:contactInformationDTO" minOccurs="0" />
+<xs:element name="preferredName" type="xs:string" minOccurs="0" />
+<xs:element name="restrictionLevel" type="xs:int" />
+<xs:element name="shortName" type="xs:string" minOccurs="0" />
+<xs:element name="synonymousNames" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="contactInformationDTO">
+<xs:sequence>
+<xs:element name="address1" type="xs:string" minOccurs="0" />
+<xs:element name="address2" type="xs:string" minOccurs="0" />
+<xs:element name="city" type="xs:string" minOccurs="0" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="country" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="fax" type="xs:string" minOccurs="0" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="organization" type="xs:string" minOccurs="0" />
+<xs:element name="stateOrProvince" type="xs:string" minOccurs="0" />
+<xs:element name="telephone" type="xs:string" minOccurs="0" />
+<xs:element name="title" type="xs:string" minOccurs="0" />
+<xs:element name="url" type="xs:string" minOccurs="0" />
+<xs:element name="value" type="xs:string" minOccurs="0" />
+<xs:element name="zipCode" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="languageDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="UtsFault">
+<xs:sequence>
+<xs:element name="faultInfo" type="xs:string" minOccurs="0" />
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllEquivalentAttributeNames">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atn" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllEquivalentAttributeNamesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAttributeNameDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourcesByFamily">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="family" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourcesByFamilyResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rootSourceDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCooccurrenceTypes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCooccurrenceTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cooccurrenceTypeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cooccurrenceTypeDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getRootSource">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourceResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rootSourceDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSourceCitations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSourceCitationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceCitationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceCitationDTO">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0" />
+<xs:element name="author" type="xs:string" minOccurs="0" />
+<xs:element name="availabilityStatement" type="xs:string" minOccurs="0" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="contentDesignator" type="xs:string" minOccurs="0" />
+<xs:element name="dateOfPublication" type="xs:string" minOccurs="0" />
+<xs:element name="dateOfRevision" type="xs:string" minOccurs="0" />
+<xs:element name="edition" type="xs:string" minOccurs="0" />
+<xs:element name="editor" type="xs:string" minOccurs="0" />
+<xs:element name="extent" type="xs:string" minOccurs="0" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+<xs:element name="location" type="xs:string" minOccurs="0" />
+<xs:element name="mediumDesignator" type="xs:string" minOccurs="0" />
+<xs:element name="notes" type="xs:string" minOccurs="0" />
+<xs:element name="organization" type="xs:string" minOccurs="0" />
+<xs:element name="placeOfPublication" type="xs:string" minOccurs="0" />
+<xs:element name="publisher" type="xs:string" minOccurs="0" />
+<xs:element name="series" type="xs:string" minOccurs="0" />
+<xs:element name="source" type="tns:sourceDTO" minOccurs="0" />
+<xs:element name="title" type="xs:string" minOccurs="0" />
+<xs:element name="value" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence>
+<xs:element name="assertsRelDirection" type="xs:boolean" />
+<xs:element name="atomCount" type="xs:int" />
+<xs:element name="charset" type="tns:characterSetDTO" minOccurs="0" />
+<xs:element name="citation" type="tns:sourceCitationDTO" minOccurs="0" />
+<xs:element name="conceptCount" type="xs:int" />
+<xs:element name="endDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="insertMetaVersion" type="xs:string" minOccurs="0" />
+<xs:element name="preferredName" type="xs:string" minOccurs="0" />
+<xs:element name="removeMetaVersion" type="xs:string" minOccurs="0" />
+<xs:element name="rootSource" type="tns:rootSourceDTO" minOccurs="0" />
+<xs:element name="startDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="synonymousNames" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="versionsAgo" type="xs:int" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="characterSetDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getIdentifierType">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="identifier" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getIdentifierTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:identifierTypeDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="identifierTypeDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getSourceTermType">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="termType" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceTermTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceTermTypeDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceTermTypeDTO">
+<xs:sequence>
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+<xs:element name="literal" type="xs:boolean" />
+<xs:element name="origValue" type="xs:string" minOccurs="0" />
+<xs:element name="rootSource" type="tns:rootSourceDTO" minOccurs="0" />
+<xs:element name="sourceOriginated" type="xs:boolean" />
+<xs:element name="suppressible" type="xs:boolean" />
+<xs:element name="termType" type="tns:termTypeDTO" minOccurs="0" />
+<xs:element name="versionsAgo" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="termTypeDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence>
+<xs:element name="codeVariantType" type="xs:string" minOccurs="0" />
+<xs:element name="hierarchicalType" type="xs:string" minOccurs="0" />
+<xs:element name="nameVariantType" type="xs:string" minOccurs="0" />
+<xs:element name="obsolete" type="xs:boolean" />
+<xs:element name="sourceTermType" type="xs:string" minOccurs="0" />
+<xs:element name="style" type="xs:string" minOccurs="0" />
+<xs:element name="usage" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getSourceRelationLabels">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceRelationLabelsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceRelationLabelDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceRelationLabelDTO">
+<xs:sequence>
+<xs:element name="additionalRelationLabel" type="tns:additionalRelationLabelDTO" minOccurs="0" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="domainId" type="xs:string" minOccurs="0" />
+<xs:element name="functional" type="xs:boolean" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+<xs:element name="inverse" type="tns:sourceRelationLabelDTO" minOccurs="0" />
+<xs:element name="inverseFunctional" type="xs:boolean" />
+<xs:element name="literal" type="xs:boolean" />
+<xs:element name="origValue" type="xs:string" minOccurs="0" />
+<xs:element name="rangeId" type="xs:string" minOccurs="0" />
+<xs:element name="relationLabel" type="tns:relationLabelDTO" minOccurs="0" />
+<xs:element name="rootSource" type="tns:rootSourceDTO" minOccurs="0" />
+<xs:element name="sourceOriginated" type="xs:boolean" />
+<xs:element name="symmetric" type="xs:boolean" />
+<xs:element name="transitive" type="xs:boolean" />
+<xs:element name="versionsAgo" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="additionalRelationLabelDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence>
+<xs:element name="inverse" type="tns:additionalRelationLabelDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="relationLabelDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence>
+<xs:element name="inverse" type="tns:relationLabelDTO" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getAllSourceTermTypes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSourceTermTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceTermTypeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAcquisitionContactInformation">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAcquisitionContactInformationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contactInformationDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCooccurrenceType">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="cooccurrenceType" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCooccurrenceTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cooccurrenceTypeDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCharacterSet">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="characterSet" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCharacterSetResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:characterSetDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSource">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="versionedSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionedSources">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionedSourcesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGeneralMetadataEntry">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="generalMetadata" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGeneralMetadataEntryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:generalMetadataEntryDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generalMetadataEntryDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0" />
+<xs:element name="type" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getCurrentVersionSource">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCurrentVersionSourceResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubheading">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="subHeading" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubheadingResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subheadingDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subheadingDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getAllTermTypes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllTermTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:termTypeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourcesByRestrictionLevel">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="restrictionLevel" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourcesByRestrictionLevelResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rootSourceDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllLanguages">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllLanguagesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:languageDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllRootSources">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllRootSourcesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rootSourceDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSuperAttributeNames">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atn" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSuperAttributeNamesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAttributeNameDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermType">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termType" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:termTypeDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLicenseContactInformation">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLicenseContactInformationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contactInformationDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSourceAttributeNames">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSourceAttributeNamesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAttributeNameDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllRootSourceFamilies">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllRootSourceFamiliesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rootSourceDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceCitation">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="citation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceCitationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceCitationDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentContactInformation">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContentContactInformationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contactInformationDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSubheadings">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSubheadingsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subheadingDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceRelationLabel">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="relationLabel" type="xs:string" minOccurs="0" />
+<xs:element name="additionalRelationLabel" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceRelationLabelResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceRelationLabelDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllAttributeNames">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllAttributeNamesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeNameDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCharacterSets">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCharacterSetsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:characterSetDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationLabel">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="relationLabel" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelationLabelResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:relationLabelDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourceSynonymousNames">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourceSynonymousNamesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllRelationLabels">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllRelationLabelsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:relationLabelDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSourceRelationLabels">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSourceRelationLabelsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceRelationLabelDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllAdditionalRelationLabels">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllAdditionalRelationLabelsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:additionalRelationLabelDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceTermTypes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceTermTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceTermTypeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCurrentUMLSVersion">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCurrentUMLSVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubEquivalentAttributeNames">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atn" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubEquivalentAttributeNamesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAttributeNameDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourcesByLanguage">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="languageAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRootSourcesByLanguageResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rootSourceDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAttributeName">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="attributeName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAttributeNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:attributeNameDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllUMLSVersions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllUMLSVersionsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceAttributeNames">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceAttributeNamesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAttributeNameDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSources">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSourcesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdditionalRelationLabel">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="additionalRelationLabel" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdditionalRelationLabelResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:additionalRelationLabelDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUpdatedSourcesByVersion">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUpdatedSourcesByVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLanguage">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="language" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLanguageResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:languageDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

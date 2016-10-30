@@ -1,0 +1,114 @@
+
+package gov.nih.nlm.umls.uts.webservice;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Clase Java para getCooccurrenceType complex type.
+ * 
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * 
+ * <pre>
+ * &lt;complexType name="getCooccurrenceType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="ticket" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="version" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="cooccurrenceType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "getCooccurrenceType", propOrder = {
+    "ticket",
+    "version",
+    "cooccurrenceType"
+})
+public class GetCooccurrenceType {
+
+    protected String ticket;
+    protected String version;
+    protected String cooccurrenceType;
+
+    /**
+     * Obtiene el valor de la propiedad ticket.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTicket() {
+        return ticket;
+    }
+
+    /**
+     * Define el valor de la propiedad ticket.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTicket(String value) {
+        this.ticket = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad version.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getVersion() {
+        return version;
+    }
+
+    /**
+     * Define el valor de la propiedad version.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setVersion(String value) {
+        this.version = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad cooccurrenceType.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCooccurrenceType() {
+        return cooccurrenceType;
+    }
+
+    /**
+     * Define el valor de la propiedad cooccurrenceType.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCooccurrenceType(String value) {
+        this.cooccurrenceType = value;
+    }
+
+}

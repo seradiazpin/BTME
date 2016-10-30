@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-nwsSecurity" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/nwsSecurity"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/nwsSecurity" destdir="${build.generated.dir}/jax-wsCache/nwsSecurity" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/nwsSecurity/wsdl/uts.nlm.nih.gov_443/services/nwsSecurity.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://uts.nlm.nih.gov:443/services/nwsSecurity?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/nwsSecurity/wsdl/uts.nlm.nih.gov_443/services/nwsSecurity.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/nwsSecurity"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/nwsSecurity">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-nwsSecurity" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/gov/nih/nlm/umls/uts/webservice"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/nwsSecurity"/>
+    </target>
+    <target name="wsimport-client-nwsContent" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/nwsContent"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/nwsContent" destdir="${build.generated.dir}/jax-wsCache/nwsContent" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/nwsContent/wsdl/uts.nlm.nih.gov_443/services/nwsContent.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://uts.nlm.nih.gov:443/services/nwsContent?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/nwsContent/wsdl/uts.nlm.nih.gov_443/services/nwsContent.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/nwsContent"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/nwsContent">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-nwsContent" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/gov/nih/nlm/umls/uts/webservice"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/nwsContent"/>
+    </target>
+    <target name="wsimport-client-nwsMetadata" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/nwsMetadata"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/nwsMetadata" destdir="${build.generated.dir}/jax-wsCache/nwsMetadata" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/nwsMetadata/wsdl/uts.nlm.nih.gov_443/services/nwsMetadata.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://uts.nlm.nih.gov:443/services/nwsMetadata?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/nwsMetadata/wsdl/uts.nlm.nih.gov_443/services/nwsMetadata.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/nwsMetadata"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/nwsMetadata">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-nwsMetadata" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/gov/nih/nlm/umls/uts/webservice"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/nwsMetadata"/>
+    </target>
+    <target name="wsimport-client-nwsSemanticNetwork" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/nwsSemanticNetwork"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/nwsSemanticNetwork" destdir="${build.generated.dir}/jax-wsCache/nwsSemanticNetwork" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/nwsSemanticNetwork/wsdl/uts.nlm.nih.gov_443/services/nwsSemanticNetwork.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://uts.nlm.nih.gov:443/services/nwsSemanticNetwork?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/nwsSemanticNetwork/wsdl/uts.nlm.nih.gov_443/services/nwsSemanticNetwork.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/nwsSemanticNetwork"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/nwsSemanticNetwork">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-nwsSemanticNetwork" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/gov/nih/nlm/umls/uts/webservice"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/nwsSemanticNetwork"/>
+    </target>
+    <target name="wsimport-client-nwsHistory" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/nwsHistory"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/nwsHistory" destdir="${build.generated.dir}/jax-wsCache/nwsHistory" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/nwsHistory/wsdl/uts.nlm.nih.gov_443/services/nwsHistory.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://uts.nlm.nih.gov:443/services/nwsHistory?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/nwsHistory/wsdl/uts.nlm.nih.gov_443/services/nwsHistory.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/nwsHistory"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/nwsHistory">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-nwsHistory" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/gov/nih/nlm/umls/uts/webservice"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/nwsHistory"/>
+    </target>
+    <target name="wsimport-client-nwsFinder" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/nwsFinder"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/nwsFinder" destdir="${build.generated.dir}/jax-wsCache/nwsFinder" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/nwsFinder/wsdl/uts.nlm.nih.gov_443/services/nwsFinder.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://uts.nlm.nih.gov:443/services/nwsFinder?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/nwsFinder/wsdl/uts.nlm.nih.gov_443/services/nwsFinder.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/nwsFinder"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/nwsFinder">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-nwsFinder" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/gov/nih/nlm/umls/uts/webservice"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/nwsFinder"/>
+    </target>
+    <target name="wsimport-client-download" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/download"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/download" destdir="${build.generated.dir}/jax-wsCache/download" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/download/wsdl/uts.nlm.nih.gov_443/services/download.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://uts.nlm.nih.gov:443/services/download?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/download/wsdl/uts.nlm.nih.gov_443/services/download.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/download"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/download">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-download" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/gov/nih/nlm/umls/uts/webservice"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/download"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-nwsSecurity, wsimport-client-nwsContent, wsimport-client-nwsMetadata, wsimport-client-nwsSemanticNetwork, wsimport-client-nwsHistory, wsimport-client-nwsFinder, wsimport-client-download"/>
+</project>

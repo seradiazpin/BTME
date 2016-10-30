@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.8 svn-revision#13980. --><xs:schema xmlns:tns="http://webservice.uts.umls.nlm.nih.gov/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.uts.umls.nlm.nih.gov/">
+
+<xs:element name="UtsFault" type="tns:UtsFault" />
+
+<xs:element name="getAtomMovements" type="tns:getAtomMovements" />
+
+<xs:element name="getAtomMovementsResponse" type="tns:getAtomMovementsResponse" />
+
+<xs:element name="getBequeathedToConceptCuis" type="tns:getBequeathedToConceptCuis" />
+
+<xs:element name="getBequeathedToConceptCuisResponse" type="tns:getBequeathedToConceptCuisResponse" />
+
+<xs:element name="getConceptBequeathals" type="tns:getConceptBequeathals" />
+
+<xs:element name="getConceptBequeathalsResponse" type="tns:getConceptBequeathalsResponse" />
+
+<xs:element name="getConceptDeletions" type="tns:getConceptDeletions" />
+
+<xs:element name="getConceptDeletionsResponse" type="tns:getConceptDeletionsResponse" />
+
+<xs:element name="getConceptMerges" type="tns:getConceptMerges" />
+
+<xs:element name="getConceptMergesResponse" type="tns:getConceptMergesResponse" />
+
+<xs:element name="getMergedToConceptCui" type="tns:getMergedToConceptCui" />
+
+<xs:element name="getMergedToConceptCuiResponse" type="tns:getMergedToConceptCuiResponse" />
+
+<xs:element name="getMergedToTermUi" type="tns:getMergedToTermUi" />
+
+<xs:element name="getMergedToTermUiResponse" type="tns:getMergedToTermUiResponse" />
+
+<xs:element name="getMovedToConceptCui" type="tns:getMovedToConceptCui" />
+
+<xs:element name="getMovedToConceptCuiResponse" type="tns:getMovedToConceptCuiResponse" />
+
+<xs:element name="getSourceAtomChanges" type="tns:getSourceAtomChanges" />
+
+<xs:element name="getSourceAtomChangesResponse" type="tns:getSourceAtomChangesResponse" />
+
+<xs:element name="getTermDeletions" type="tns:getTermDeletions" />
+
+<xs:element name="getTermDeletionsResponse" type="tns:getTermDeletionsResponse" />
+
+<xs:element name="getTermMerges" type="tns:getTermMerges" />
+
+<xs:element name="getTermMergesResponse" type="tns:getTermMergesResponse" />
+
+<xs:element name="getTermStringDeletions" type="tns:getTermStringDeletions" />
+
+<xs:element name="getTermStringDeletionsResponse" type="tns:getTermStringDeletionsResponse" />
+
+<xs:complexType name="getConceptDeletions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="newerVersion" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="olderVersion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptDeletionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conceptDeathDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="conceptDeathDTO">
+<xs:complexContent>
+<xs:extension base="tns:changeRecordDTO">
+<xs:sequence>
+<xs:element name="defaultPreferredName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="changeRecordDTO">
+<xs:sequence>
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="reason" type="xs:string" minOccurs="0" />
+<xs:element name="ui" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UtsFault">
+<xs:sequence>
+<xs:element name="faultInfo" type="xs:string" minOccurs="0" />
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceAtomChanges">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="rootSourceAbbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="sourceAtomId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSourceAtomChangesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceAtomChangeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sourceAtomChangeDTO">
+<xs:complexContent>
+<xs:extension base="tns:changeRecordDTO">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0" />
+<xs:element name="literal" type="xs:boolean" />
+<xs:element name="rootSource" type="xs:string" minOccurs="0" />
+<xs:element name="sourceOriginated" type="xs:boolean" />
+<xs:element name="sourceUi" type="xs:string" minOccurs="0" />
+<xs:element name="type" type="xs:string" minOccurs="0" />
+<xs:element name="value" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getConceptBequeathals">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="newerVersion" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="olderVersion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptBequeathalsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conceptBequeathalDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="conceptBequeathalDTO">
+<xs:complexContent>
+<xs:extension base="tns:conceptDeathDTO">
+<xs:sequence>
+<xs:element name="additionalLabel" type="xs:string" minOccurs="0" />
+<xs:element name="label" type="xs:string" minOccurs="0" />
+<xs:element name="relatedConceptUi" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getMergedToConceptCui">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMergedToConceptCuiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermStringDeletions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termStringId" type="xs:string" minOccurs="0" />
+<xs:element name="fromVersion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermStringDeletionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:termStringDeathDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="termStringDeathDTO">
+<xs:complexContent>
+<xs:extension base="tns:changeRecordDTO">
+<xs:sequence>
+<xs:element name="defaultPreferredName" type="xs:string" minOccurs="0" />
+<xs:element name="language" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getBequeathedToConceptCuis">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="targetVersion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBequeathedToConceptCuisResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomMovements">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAtomMovementsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:atomMovementDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atomMovementDTO">
+<xs:complexContent>
+<xs:extension base="tns:changeRecordDTO">
+<xs:sequence>
+<xs:element name="newConceptUi" type="xs:string" minOccurs="0" />
+<xs:element name="oldConceptUi" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getConceptMerges">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="newerVersion" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="olderVersion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptMergesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conceptMergeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="conceptMergeDTO">
+<xs:complexContent>
+<xs:extension base="tns:changeRecordDTO">
+<xs:sequence>
+<xs:element name="newConceptUi" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getTermMerges">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermMergesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:termMergeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="termMergeDTO">
+<xs:complexContent>
+<xs:extension base="tns:changeRecordDTO">
+<xs:sequence>
+<xs:element name="newTermUi" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getMergedToTermUi">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMergedToTermUiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMovedToConceptCui">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="atomId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMovedToConceptCuiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermDeletions">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="termId" type="xs:string" minOccurs="0" />
+<xs:element name="fromVersion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermDeletionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:termDeathDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="termDeathDTO">
+<xs:complexContent>
+<xs:extension base="tns:changeRecordDTO">
+<xs:sequence>
+<xs:element name="defaultPreferredName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+       
+    <h:head>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+        <title>Buscador Simple</title>
+    </h:head>
+    <h:body class="container">
+        <div class="col-lg-12">
+            <h1>Buscador simple</h1>
+        </div>
+        <div class="col-lg-5" >
+            <h:form class="form-group">
+                <h:inputText id="term"  value="#{finder.term}" required = "true" requiredMessage="Termino nesesario"/>
+                <h:commandButton   action="#{finder.find()}" value="Buscar" class="btn btn-default"/>
+            </h:form>
+            
+            
+            <c:if test="#{finder.ans.size()!= 0}">
+                
+                <div id="users">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="sort btn btn-info" data-sort="labelID">
+                                Sort by name
+                            </button> 
+                        </span>
+                        <input class="search form-control" placeholder="Search" />
+                    </div>
+           
+                    <div id="listId">
+                        <ul class="list list-group">
+                            <c:forEach items="#{finder.ans}" var="item">
+                                <h:form>
+                                <li class="list-group-item">
+                                    <h:commandLink id="inputName" action="#{finder.information(item.ui)}">
+                                        <p><span class="ui">#{item.ui}</span> - <span class="labelID">#{item.label}</span></p>
+                                        <f:ajax execute="inputName" render="outputMessage" />
+                                    </h:commandLink>
+                                </li>
+                                    </h:form>
+                            </c:forEach>
+                        </ul>
+                        <ul class="pagination"></ul>
+                    </div>
+                </div>
+                
+            </c:if>
+        </div>
+        <div class="col-lg-7">     
+            <h:form id="outputMessage">
+                <c:if test="#{finder.inf.concept.defaultPreferredName.length() != 0 }">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2>#{finder.termSpecific} - #{finder.inf.concept.defaultPreferredName}</h2>
+                            <h3>Grupos semanticos</h3>
+                                <c:forEach items="#{finder.inf.concept.semanticTypes}" var="stypes">
+                                    <a class="btn bg-primary" href="#">Nombre   <span class="badge "> #{stypes}</span></a>
+                                </c:forEach>
+                    </div>
+                    <div class="panel-body">
+                       
+                        <c:if test="#{finder.inf.definitions.size() != null}">
+                            
+                        <c:if test="#{finder.inf.definitions.size() != 0}">
+                            <c:forEach items="#{finder.inf.definitions}" var="item">
+                                <li class="well text-justify"><h:outputText value="#{item.getValue()}" /></li>
+                            </c:forEach>
+                        </c:if>
+                        <c:if test="#{finder.inf.definitions.size()== 0}">
+                            <h3 class="text-warning">Sin Definiciones</h3>
+                        </c:if>
+                        </c:if>
+                        
+                    </div>
+                    <div class="panel-footer">Definiciones = #{finder.inf.definitions.size()}</div>
+                </div>
+            </c:if>
+                
+            </h:form>
+            
+                
+            <!--
+            <ui:insert name="search" id="outputMessage">
+                <ui:include src="newTemplate.xhtml"/>
+            </ui:insert>-->
+        </div>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/list.min.js"></script>
+        <script src="js/list.pagination.min.js"></script>
+        <script>
+            var options = {
+                valueNames: [ 'ui', 'labelID' ],
+                page: 7,
+                plugins: [
+                    ListPagination({})
+                ]
+              };
+
+              var userList = new List('users', options);
+        </script>
+    </h:body>
+</html>
+

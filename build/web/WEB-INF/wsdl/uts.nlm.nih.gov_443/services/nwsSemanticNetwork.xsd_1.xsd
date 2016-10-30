@@ -1,0 +1,467 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.8 svn-revision#13980. --><xs:schema xmlns:tns="http://webservice.uts.umls.nlm.nih.gov/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.uts.umls.nlm.nih.gov/">
+
+<xs:element name="UtsFault" type="tns:UtsFault" />
+
+<xs:element name="getAllSemanticNetworkRelationLabelRelations" type="tns:getAllSemanticNetworkRelationLabelRelations" />
+
+<xs:element name="getAllSemanticNetworkRelationLabelRelationsResponse" type="tns:getAllSemanticNetworkRelationLabelRelationsResponse" />
+
+<xs:element name="getAllSemanticNetworkRelationLabels" type="tns:getAllSemanticNetworkRelationLabels" />
+
+<xs:element name="getAllSemanticNetworkRelationLabelsResponse" type="tns:getAllSemanticNetworkRelationLabelsResponse" />
+
+<xs:element name="getAllSemanticTypeGroups" type="tns:getAllSemanticTypeGroups" />
+
+<xs:element name="getAllSemanticTypeGroupsResponse" type="tns:getAllSemanticTypeGroupsResponse" />
+
+<xs:element name="getAllSemanticTypeRelations" type="tns:getAllSemanticTypeRelations" />
+
+<xs:element name="getAllSemanticTypeRelationsResponse" type="tns:getAllSemanticTypeRelationsResponse" />
+
+<xs:element name="getAllSemanticTypes" type="tns:getAllSemanticTypes" />
+
+<xs:element name="getAllSemanticTypesResponse" type="tns:getAllSemanticTypesResponse" />
+
+<xs:element name="getInheritedSemanticNetworkRelationLabelRelations" type="tns:getInheritedSemanticNetworkRelationLabelRelations" />
+
+<xs:element name="getInheritedSemanticNetworkRelationLabelRelationsResponse" type="tns:getInheritedSemanticNetworkRelationLabelRelationsResponse" />
+
+<xs:element name="getInheritedSemanticTypeRelations" type="tns:getInheritedSemanticTypeRelations" />
+
+<xs:element name="getInheritedSemanticTypeRelationsResponse" type="tns:getInheritedSemanticTypeRelationsResponse" />
+
+<xs:element name="getInverseInheritedSemanticNetworkRelationLabelRelations" type="tns:getInverseInheritedSemanticNetworkRelationLabelRelations" />
+
+<xs:element name="getInverseInheritedSemanticNetworkRelationLabelRelationsResponse" type="tns:getInverseInheritedSemanticNetworkRelationLabelRelationsResponse" />
+
+<xs:element name="getInverseInheritedSemanticTypeRelations" type="tns:getInverseInheritedSemanticTypeRelations" />
+
+<xs:element name="getInverseInheritedSemanticTypeRelationsResponse" type="tns:getInverseInheritedSemanticTypeRelationsResponse" />
+
+<xs:element name="getInverseSemanticNetworkRelationLabelRelations" type="tns:getInverseSemanticNetworkRelationLabelRelations" />
+
+<xs:element name="getInverseSemanticNetworkRelationLabelRelationsResponse" type="tns:getInverseSemanticNetworkRelationLabelRelationsResponse" />
+
+<xs:element name="getInverseSemanticTypeRelations" type="tns:getInverseSemanticTypeRelations" />
+
+<xs:element name="getInverseSemanticTypeRelationsResponse" type="tns:getInverseSemanticTypeRelationsResponse" />
+
+<xs:element name="getSemanticNetworkRelationLabel" type="tns:getSemanticNetworkRelationLabel" />
+
+<xs:element name="getSemanticNetworkRelationLabelRelation" type="tns:getSemanticNetworkRelationLabelRelation" />
+
+<xs:element name="getSemanticNetworkRelationLabelRelationResponse" type="tns:getSemanticNetworkRelationLabelRelationResponse" />
+
+<xs:element name="getSemanticNetworkRelationLabelRelations" type="tns:getSemanticNetworkRelationLabelRelations" />
+
+<xs:element name="getSemanticNetworkRelationLabelRelationsForPair" type="tns:getSemanticNetworkRelationLabelRelationsForPair" />
+
+<xs:element name="getSemanticNetworkRelationLabelRelationsForPairResponse" type="tns:getSemanticNetworkRelationLabelRelationsForPairResponse" />
+
+<xs:element name="getSemanticNetworkRelationLabelRelationsResponse" type="tns:getSemanticNetworkRelationLabelRelationsResponse" />
+
+<xs:element name="getSemanticNetworkRelationLabelResponse" type="tns:getSemanticNetworkRelationLabelResponse" />
+
+<xs:element name="getSemanticType" type="tns:getSemanticType" />
+
+<xs:element name="getSemanticTypeGroup" type="tns:getSemanticTypeGroup" />
+
+<xs:element name="getSemanticTypeGroupResponse" type="tns:getSemanticTypeGroupResponse" />
+
+<xs:element name="getSemanticTypeRelation" type="tns:getSemanticTypeRelation" />
+
+<xs:element name="getSemanticTypeRelationResponse" type="tns:getSemanticTypeRelationResponse" />
+
+<xs:element name="getSemanticTypeRelations" type="tns:getSemanticTypeRelations" />
+
+<xs:element name="getSemanticTypeRelationsForPair" type="tns:getSemanticTypeRelationsForPair" />
+
+<xs:element name="getSemanticTypeRelationsForPairResponse" type="tns:getSemanticTypeRelationsForPairResponse" />
+
+<xs:element name="getSemanticTypeRelationsResponse" type="tns:getSemanticTypeRelationsResponse" />
+
+<xs:element name="getSemanticTypeResponse" type="tns:getSemanticTypeResponse" />
+
+<xs:element name="getSemanticTypesByGroup" type="tns:getSemanticTypesByGroup" />
+
+<xs:element name="getSemanticTypesByGroupResponse" type="tns:getSemanticTypesByGroupResponse" />
+
+<xs:complexType name="getInheritedSemanticTypeRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInheritedSemanticTypeRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="semanticTypeRelationDTO">
+<xs:sequence>
+<xs:element name="blocked" type="xs:boolean" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="defined" type="xs:boolean" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+<xs:element name="inherited" type="xs:boolean" />
+<xs:element name="relatedSemanticType" type="tns:semanticTypeDTO" minOccurs="0" />
+<xs:element name="relationLabel" type="tns:semanticNetworkRelationLabelDTO" minOccurs="0" />
+<xs:element name="semanticType" type="tns:semanticTypeDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="semanticTypeDTO">
+<xs:sequence>
+<xs:element name="abbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="childCount" type="xs:int" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="definition" type="xs:string" minOccurs="0" />
+<xs:element name="example" type="xs:string" minOccurs="0" />
+<xs:element name="nonHuman" type="xs:string" minOccurs="0" />
+<xs:element name="relationCount" type="xs:int" />
+<xs:element name="semanticTypeGroup" type="tns:semanticTypeGroupDTO" minOccurs="0" />
+<xs:element name="treeNumber" type="xs:string" minOccurs="0" />
+<xs:element name="ui" type="xs:string" minOccurs="0" />
+<xs:element name="usageNote" type="xs:string" minOccurs="0" />
+<xs:element name="value" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="semanticTypeGroupDTO">
+<xs:complexContent>
+<xs:extension base="tns:validDTO">
+<xs:sequence>
+<xs:element name="semanticTypeCount" type="xs:int" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="validDTO">
+<xs:sequence>
+<xs:element name="abbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="expandedForm" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="semanticNetworkRelationLabelDTO">
+<xs:sequence>
+<xs:element name="abbreviation" type="xs:string" minOccurs="0" />
+<xs:element name="childCount" type="xs:int" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="definition" type="xs:string" minOccurs="0" />
+<xs:element name="example" type="xs:string" minOccurs="0" />
+<xs:element name="inverseLabel" type="xs:string" minOccurs="0" />
+<xs:element name="label" type="xs:string" minOccurs="0" />
+<xs:element name="relationCount" type="xs:int" />
+<xs:element name="treeNumber" type="xs:string" minOccurs="0" />
+<xs:element name="ui" type="xs:string" minOccurs="0" />
+<xs:element name="usageNote" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UtsFault">
+<xs:sequence>
+<xs:element name="faultInfo" type="xs:string" minOccurs="0" />
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypeRelationsForPair">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+<xs:element name="relatedSemanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypeRelationsForPairResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInverseInheritedSemanticNetworkRelationLabelRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInverseInheritedSemanticNetworkRelationLabelRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticNetworkRelationLabelRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="semanticNetworkRelationLabelRelationDTO">
+<xs:sequence>
+<xs:element name="blocked" type="xs:boolean" />
+<xs:element name="classType" type="xs:string" minOccurs="0" />
+<xs:element name="defined" type="xs:boolean" />
+<xs:element name="handle" type="xs:string" minOccurs="0" />
+<xs:element name="inherited" type="xs:boolean" />
+<xs:element name="relatedSNRelationLabel" type="tns:semanticNetworkRelationLabelDTO" minOccurs="0" />
+<xs:element name="relationLabel" type="tns:semanticNetworkRelationLabelDTO" minOccurs="0" />
+<xs:element name="snRelationLabel" type="tns:semanticNetworkRelationLabelDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticTypes">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypeRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypeRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticTypeGroups">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticTypeGroupsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeGroupDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticNetworkRelationLabelRelation">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+<xs:element name="semanticRelationLabelId" type="xs:string" minOccurs="0" />
+<xs:element name="relatedSemanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticNetworkRelationLabelRelationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticNetworkRelationLabelRelationDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInverseInheritedSemanticTypeRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInverseInheritedSemanticTypeRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypesByGroup">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticGroup" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypesByGroupResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInverseSemanticTypeRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInverseSemanticTypeRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticNetworkRelationLabelRelationsForPair">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+<xs:element name="relatedSemanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticNetworkRelationLabelRelationsForPairResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticNetworkRelationLabelRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInheritedSemanticNetworkRelationLabelRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInheritedSemanticNetworkRelationLabelRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticNetworkRelationLabelRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInverseSemanticNetworkRelationLabelRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInverseSemanticNetworkRelationLabelRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticNetworkRelationLabelRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticNetworkRelationLabel">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticNetworkRelationLabelResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticNetworkRelationLabelDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticTypeRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticTypeRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticNetworkRelationLabelRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticNetworkRelationLabelRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticNetworkRelationLabelRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticType">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticNetworkRelationLabelRelations">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticNetworkRelationLabelRelationsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticNetworkRelationLabelRelationDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticNetworkRelationLabels">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSemanticNetworkRelationLabelsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticNetworkRelationLabelDTO" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypeRelation">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticTypeId" type="xs:string" minOccurs="0" />
+<xs:element name="semanticRelationLabelId" type="xs:string" minOccurs="0" />
+<xs:element name="relatedSemanticTypeId" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypeRelationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeRelationDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypeGroup">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="semanticGroup" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSemanticTypeGroupResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:semanticTypeGroupDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

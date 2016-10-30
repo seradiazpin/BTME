@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://uts.nlm.nih.gov/services/nwsFinder?wsdl" uri="src/conf/xml-resources/web-service-references/nwsFinder/wsdl/uts.nlm.nih.gov/services/nwsFinder.wsdl"/>
+    <system systemId="https://uts.nlm.nih.gov/services/nwsMetadata?wsdl" uri="src/conf/xml-resources/web-service-references/nwsMetadata_1/wsdl/uts.nlm.nih.gov/services/nwsMetadata.wsdl"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsContent?wsdl" uri="src/conf/xml-resources/web-service-references/nwsContent/wsdl/uts.nlm.nih.gov_443/services/nwsContent.wsdl"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsContent?xsd=1" uri="src/conf/xml-resources/web-service-references/nwsContent/wsdl/uts.nlm.nih.gov_443/services/nwsContent.xsd_1.xsd"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsMetadata?wsdl" uri="src/conf/xml-resources/web-service-references/nwsMetadata/wsdl/uts.nlm.nih.gov_443/services/nwsMetadata.wsdl"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsMetadata?xsd=1" uri="src/conf/xml-resources/web-service-references/nwsMetadata/wsdl/uts.nlm.nih.gov_443/services/nwsMetadata.xsd_1.xsd"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsSemanticNetwork?wsdl" uri="src/conf/xml-resources/web-service-references/nwsSemanticNetwork/wsdl/uts.nlm.nih.gov_443/services/nwsSemanticNetwork.wsdl"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsSemanticNetwork?xsd=1" uri="src/conf/xml-resources/web-service-references/nwsSemanticNetwork/wsdl/uts.nlm.nih.gov_443/services/nwsSemanticNetwork.xsd_1.xsd"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsHistory?wsdl" uri="src/conf/xml-resources/web-service-references/nwsHistory/wsdl/uts.nlm.nih.gov_443/services/nwsHistory.wsdl"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsHistory?xsd=1" uri="src/conf/xml-resources/web-service-references/nwsHistory/wsdl/uts.nlm.nih.gov_443/services/nwsHistory.xsd_1.xsd"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsFinder?wsdl" uri="src/conf/xml-resources/web-service-references/nwsFinder/wsdl/uts.nlm.nih.gov_443/services/nwsFinder.wsdl"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsFinder?xsd=1" uri="src/conf/xml-resources/web-service-references/nwsFinder/wsdl/uts.nlm.nih.gov_443/services/nwsFinder.xsd_1.xsd"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/download?wsdl" uri="src/conf/xml-resources/web-service-references/download/wsdl/uts.nlm.nih.gov_443/services/download.wsdl"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/download?xsd=1" uri="src/conf/xml-resources/web-service-references/download/wsdl/uts.nlm.nih.gov_443/services/download.xsd_1.xsd"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsSecurity?wsdl" uri="src/conf/xml-resources/web-services/NewWebServiceFromWSDL/wsdl/uts.nlm.nih.gov_443/services/nwsSecurity.wsdl"/>
+    <system systemId="https://uts.nlm.nih.gov:443/services/nwsSecurity?xsd=1" uri="src/conf/xml-resources/web-services/NewWebServiceFromWSDL/wsdl/uts.nlm.nih.gov_443/services/nwsSecurity.xsd_1.xsd"/>
+</catalog>
