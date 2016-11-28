@@ -1095,19 +1095,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getUpdatedSourcesByVersion">
-<xs:sequence>
-<xs:element name="ticket" type="xs:string" minOccurs="0" />
-<xs:element name="version" type="xs:string" minOccurs="0" />
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getUpdatedSourcesByVersionResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:sourceDTO" minOccurs="0" maxOccurs="unbounded" />
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="getLanguage">
 <xs:sequence>
 <xs:element name="ticket" type="xs:string" minOccurs="0" />
@@ -1119,6 +1106,19 @@
 <xs:complexType name="getLanguageResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:languageDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUpdatedSourcesByVersion">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUpdatedSourcesByVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sourceDTO" minOccurs="0" maxOccurs="unbounded" />
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

@@ -24,15 +24,22 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _UtsFault_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "UtsFault");
-    private final static QName _GetProxyGrantTicket_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getProxyGrantTicket");
-    private final static QName _GetProxyGrantTicketResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getProxyGrantTicketResponse");
-    private final static QName _GetProxyGrantTicketWithApiKey_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getProxyGrantTicketWithApiKey");
-    private final static QName _GetProxyGrantTicketWithApiKeyResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getProxyGrantTicketWithApiKeyResponse");
-    private final static QName _GetProxyTicket_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getProxyTicket");
-    private final static QName _GetProxyTicketResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getProxyTicketResponse");
-    private final static QName _ValidateProxyTicket_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "validateProxyTicket");
-    private final static QName _ValidateProxyTicketResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "validateProxyTicketResponse");
+    private final static QName _GetDownloadArtifact_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getDownloadArtifact");
+    private final static QName _GetDownloadArtifactResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getDownloadArtifactResponse");
+    private final static QName _GetDownloadArtifacts_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getDownloadArtifacts");
+    private final static QName _GetDownloadArtifactsResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getDownloadArtifactsResponse");
+    private final static QName _GetDownloadRelease_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getDownloadRelease");
+    private final static QName _GetDownloadReleaseResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getDownloadReleaseResponse");
+    private final static QName _GetDownloadReleases_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getDownloadReleases");
+    private final static QName _GetDownloadReleasesResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getDownloadReleasesResponse");
+    private final static QName _GetLatestDownloadRelease_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getLatestDownloadRelease");
+    private final static QName _GetLatestDownloadReleaseResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getLatestDownloadReleaseResponse");
+    private final static QName _GetLatestDownloadReleaseSet_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getLatestDownloadReleaseSet");
+    private final static QName _GetLatestDownloadReleaseSetResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getLatestDownloadReleaseSetResponse");
+    private final static QName _GetValidDownloadGroups_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getValidDownloadGroups");
+    private final static QName _GetValidDownloadGroupsResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "getValidDownloadGroupsResponse");
+    private final static QName _Init_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "init");
+    private final static QName _InitResponse_QNAME = new QName("http://webservice.uts.umls.nlm.nih.gov/", "initResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: gov.nih.nlm.umls.uts.webservice
@@ -42,156 +49,299 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UtsFault }
+     * Create an instance of {@link GetDownloadArtifact }
      * 
      */
-    public UtsFault createUtsFault() {
-        return new UtsFault();
+    public GetDownloadArtifact createGetDownloadArtifact() {
+        return new GetDownloadArtifact();
     }
 
     /**
-     * Create an instance of {@link GetProxyGrantTicket }
+     * Create an instance of {@link GetDownloadArtifactResponse }
      * 
      */
-    public GetProxyGrantTicket createGetProxyGrantTicket() {
-        return new GetProxyGrantTicket();
+    public GetDownloadArtifactResponse createGetDownloadArtifactResponse() {
+        return new GetDownloadArtifactResponse();
     }
 
     /**
-     * Create an instance of {@link GetProxyGrantTicketResponse }
+     * Create an instance of {@link GetDownloadArtifacts }
      * 
      */
-    public GetProxyGrantTicketResponse createGetProxyGrantTicketResponse() {
-        return new GetProxyGrantTicketResponse();
+    public GetDownloadArtifacts createGetDownloadArtifacts() {
+        return new GetDownloadArtifacts();
     }
 
     /**
-     * Create an instance of {@link GetProxyGrantTicketWithApiKey }
+     * Create an instance of {@link GetDownloadArtifactsResponse }
      * 
      */
-    public GetProxyGrantTicketWithApiKey createGetProxyGrantTicketWithApiKey() {
-        return new GetProxyGrantTicketWithApiKey();
+    public GetDownloadArtifactsResponse createGetDownloadArtifactsResponse() {
+        return new GetDownloadArtifactsResponse();
     }
 
     /**
-     * Create an instance of {@link GetProxyGrantTicketWithApiKeyResponse }
+     * Create an instance of {@link GetDownloadRelease }
      * 
      */
-    public GetProxyGrantTicketWithApiKeyResponse createGetProxyGrantTicketWithApiKeyResponse() {
-        return new GetProxyGrantTicketWithApiKeyResponse();
+    public GetDownloadRelease createGetDownloadRelease() {
+        return new GetDownloadRelease();
     }
 
     /**
-     * Create an instance of {@link GetProxyTicket }
+     * Create an instance of {@link GetDownloadReleaseResponse }
      * 
      */
-    public GetProxyTicket createGetProxyTicket() {
-        return new GetProxyTicket();
+    public GetDownloadReleaseResponse createGetDownloadReleaseResponse() {
+        return new GetDownloadReleaseResponse();
     }
 
     /**
-     * Create an instance of {@link GetProxyTicketResponse }
+     * Create an instance of {@link GetDownloadReleases }
      * 
      */
-    public GetProxyTicketResponse createGetProxyTicketResponse() {
-        return new GetProxyTicketResponse();
+    public GetDownloadReleases createGetDownloadReleases() {
+        return new GetDownloadReleases();
     }
 
     /**
-     * Create an instance of {@link ValidateProxyTicket }
+     * Create an instance of {@link GetDownloadReleasesResponse }
      * 
      */
-    public ValidateProxyTicket createValidateProxyTicket() {
-        return new ValidateProxyTicket();
+    public GetDownloadReleasesResponse createGetDownloadReleasesResponse() {
+        return new GetDownloadReleasesResponse();
     }
 
     /**
-     * Create an instance of {@link ValidateProxyTicketResponse }
+     * Create an instance of {@link GetLatestDownloadRelease }
      * 
      */
-    public ValidateProxyTicketResponse createValidateProxyTicketResponse() {
-        return new ValidateProxyTicketResponse();
+    public GetLatestDownloadRelease createGetLatestDownloadRelease() {
+        return new GetLatestDownloadRelease();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UtsFault }{@code >}}
+     * Create an instance of {@link GetLatestDownloadReleaseResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "UtsFault")
-    public JAXBElement<UtsFault> createUtsFault(UtsFault value) {
-        return new JAXBElement<UtsFault>(_UtsFault_QNAME, UtsFault.class, null, value);
+    public GetLatestDownloadReleaseResponse createGetLatestDownloadReleaseResponse() {
+        return new GetLatestDownloadReleaseResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetProxyGrantTicket }{@code >}}
+     * Create an instance of {@link GetLatestDownloadReleaseSet }
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getProxyGrantTicket")
-    public JAXBElement<GetProxyGrantTicket> createGetProxyGrantTicket(GetProxyGrantTicket value) {
-        return new JAXBElement<GetProxyGrantTicket>(_GetProxyGrantTicket_QNAME, GetProxyGrantTicket.class, null, value);
+    public GetLatestDownloadReleaseSet createGetLatestDownloadReleaseSet() {
+        return new GetLatestDownloadReleaseSet();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetProxyGrantTicketResponse }{@code >}}
+     * Create an instance of {@link GetLatestDownloadReleaseSetResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getProxyGrantTicketResponse")
-    public JAXBElement<GetProxyGrantTicketResponse> createGetProxyGrantTicketResponse(GetProxyGrantTicketResponse value) {
-        return new JAXBElement<GetProxyGrantTicketResponse>(_GetProxyGrantTicketResponse_QNAME, GetProxyGrantTicketResponse.class, null, value);
+    public GetLatestDownloadReleaseSetResponse createGetLatestDownloadReleaseSetResponse() {
+        return new GetLatestDownloadReleaseSetResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetProxyGrantTicketWithApiKey }{@code >}}
+     * Create an instance of {@link GetValidDownloadGroups }
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getProxyGrantTicketWithApiKey")
-    public JAXBElement<GetProxyGrantTicketWithApiKey> createGetProxyGrantTicketWithApiKey(GetProxyGrantTicketWithApiKey value) {
-        return new JAXBElement<GetProxyGrantTicketWithApiKey>(_GetProxyGrantTicketWithApiKey_QNAME, GetProxyGrantTicketWithApiKey.class, null, value);
+    public GetValidDownloadGroups createGetValidDownloadGroups() {
+        return new GetValidDownloadGroups();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetProxyGrantTicketWithApiKeyResponse }{@code >}}
+     * Create an instance of {@link GetValidDownloadGroupsResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getProxyGrantTicketWithApiKeyResponse")
-    public JAXBElement<GetProxyGrantTicketWithApiKeyResponse> createGetProxyGrantTicketWithApiKeyResponse(GetProxyGrantTicketWithApiKeyResponse value) {
-        return new JAXBElement<GetProxyGrantTicketWithApiKeyResponse>(_GetProxyGrantTicketWithApiKeyResponse_QNAME, GetProxyGrantTicketWithApiKeyResponse.class, null, value);
+    public GetValidDownloadGroupsResponse createGetValidDownloadGroupsResponse() {
+        return new GetValidDownloadGroupsResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetProxyTicket }{@code >}}
+     * Create an instance of {@link Init }
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getProxyTicket")
-    public JAXBElement<GetProxyTicket> createGetProxyTicket(GetProxyTicket value) {
-        return new JAXBElement<GetProxyTicket>(_GetProxyTicket_QNAME, GetProxyTicket.class, null, value);
+    public Init createInit() {
+        return new Init();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetProxyTicketResponse }{@code >}}
+     * Create an instance of {@link InitResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getProxyTicketResponse")
-    public JAXBElement<GetProxyTicketResponse> createGetProxyTicketResponse(GetProxyTicketResponse value) {
-        return new JAXBElement<GetProxyTicketResponse>(_GetProxyTicketResponse_QNAME, GetProxyTicketResponse.class, null, value);
+    public InitResponse createInitResponse() {
+        return new InitResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ValidateProxyTicket }{@code >}}
+     * Create an instance of {@link DlReleaseDTO }
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "validateProxyTicket")
-    public JAXBElement<ValidateProxyTicket> createValidateProxyTicket(ValidateProxyTicket value) {
-        return new JAXBElement<ValidateProxyTicket>(_ValidateProxyTicket_QNAME, ValidateProxyTicket.class, null, value);
+    public DlReleaseDTO createDlReleaseDTO() {
+        return new DlReleaseDTO();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ValidateProxyTicketResponse }{@code >}}
+     * Create an instance of {@link DlArtifactDTO }
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "validateProxyTicketResponse")
-    public JAXBElement<ValidateProxyTicketResponse> createValidateProxyTicketResponse(ValidateProxyTicketResponse value) {
-        return new JAXBElement<ValidateProxyTicketResponse>(_ValidateProxyTicketResponse_QNAME, ValidateProxyTicketResponse.class, null, value);
+    public DlArtifactDTO createDlArtifactDTO() {
+        return new DlArtifactDTO();
+    }
+
+    /**
+     * Create an instance of {@link DlGroupDTO }
+     * 
+     */
+    public DlGroupDTO createDlGroupDTO() {
+        return new DlGroupDTO();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetDownloadArtifact }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getDownloadArtifact")
+    public JAXBElement<GetDownloadArtifact> createGetDownloadArtifact(GetDownloadArtifact value) {
+        return new JAXBElement<GetDownloadArtifact>(_GetDownloadArtifact_QNAME, GetDownloadArtifact.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetDownloadArtifactResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getDownloadArtifactResponse")
+    public JAXBElement<GetDownloadArtifactResponse> createGetDownloadArtifactResponse(GetDownloadArtifactResponse value) {
+        return new JAXBElement<GetDownloadArtifactResponse>(_GetDownloadArtifactResponse_QNAME, GetDownloadArtifactResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetDownloadArtifacts }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getDownloadArtifacts")
+    public JAXBElement<GetDownloadArtifacts> createGetDownloadArtifacts(GetDownloadArtifacts value) {
+        return new JAXBElement<GetDownloadArtifacts>(_GetDownloadArtifacts_QNAME, GetDownloadArtifacts.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetDownloadArtifactsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getDownloadArtifactsResponse")
+    public JAXBElement<GetDownloadArtifactsResponse> createGetDownloadArtifactsResponse(GetDownloadArtifactsResponse value) {
+        return new JAXBElement<GetDownloadArtifactsResponse>(_GetDownloadArtifactsResponse_QNAME, GetDownloadArtifactsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetDownloadRelease }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getDownloadRelease")
+    public JAXBElement<GetDownloadRelease> createGetDownloadRelease(GetDownloadRelease value) {
+        return new JAXBElement<GetDownloadRelease>(_GetDownloadRelease_QNAME, GetDownloadRelease.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetDownloadReleaseResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getDownloadReleaseResponse")
+    public JAXBElement<GetDownloadReleaseResponse> createGetDownloadReleaseResponse(GetDownloadReleaseResponse value) {
+        return new JAXBElement<GetDownloadReleaseResponse>(_GetDownloadReleaseResponse_QNAME, GetDownloadReleaseResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetDownloadReleases }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getDownloadReleases")
+    public JAXBElement<GetDownloadReleases> createGetDownloadReleases(GetDownloadReleases value) {
+        return new JAXBElement<GetDownloadReleases>(_GetDownloadReleases_QNAME, GetDownloadReleases.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetDownloadReleasesResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getDownloadReleasesResponse")
+    public JAXBElement<GetDownloadReleasesResponse> createGetDownloadReleasesResponse(GetDownloadReleasesResponse value) {
+        return new JAXBElement<GetDownloadReleasesResponse>(_GetDownloadReleasesResponse_QNAME, GetDownloadReleasesResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLatestDownloadRelease }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getLatestDownloadRelease")
+    public JAXBElement<GetLatestDownloadRelease> createGetLatestDownloadRelease(GetLatestDownloadRelease value) {
+        return new JAXBElement<GetLatestDownloadRelease>(_GetLatestDownloadRelease_QNAME, GetLatestDownloadRelease.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLatestDownloadReleaseResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getLatestDownloadReleaseResponse")
+    public JAXBElement<GetLatestDownloadReleaseResponse> createGetLatestDownloadReleaseResponse(GetLatestDownloadReleaseResponse value) {
+        return new JAXBElement<GetLatestDownloadReleaseResponse>(_GetLatestDownloadReleaseResponse_QNAME, GetLatestDownloadReleaseResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLatestDownloadReleaseSet }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getLatestDownloadReleaseSet")
+    public JAXBElement<GetLatestDownloadReleaseSet> createGetLatestDownloadReleaseSet(GetLatestDownloadReleaseSet value) {
+        return new JAXBElement<GetLatestDownloadReleaseSet>(_GetLatestDownloadReleaseSet_QNAME, GetLatestDownloadReleaseSet.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLatestDownloadReleaseSetResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getLatestDownloadReleaseSetResponse")
+    public JAXBElement<GetLatestDownloadReleaseSetResponse> createGetLatestDownloadReleaseSetResponse(GetLatestDownloadReleaseSetResponse value) {
+        return new JAXBElement<GetLatestDownloadReleaseSetResponse>(_GetLatestDownloadReleaseSetResponse_QNAME, GetLatestDownloadReleaseSetResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetValidDownloadGroups }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getValidDownloadGroups")
+    public JAXBElement<GetValidDownloadGroups> createGetValidDownloadGroups(GetValidDownloadGroups value) {
+        return new JAXBElement<GetValidDownloadGroups>(_GetValidDownloadGroups_QNAME, GetValidDownloadGroups.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetValidDownloadGroupsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "getValidDownloadGroupsResponse")
+    public JAXBElement<GetValidDownloadGroupsResponse> createGetValidDownloadGroupsResponse(GetValidDownloadGroupsResponse value) {
+        return new JAXBElement<GetValidDownloadGroupsResponse>(_GetValidDownloadGroupsResponse_QNAME, GetValidDownloadGroupsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Init }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "init")
+    public JAXBElement<Init> createInit(Init value) {
+        return new JAXBElement<Init>(_Init_QNAME, Init.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InitResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.uts.umls.nlm.nih.gov/", name = "initResponse")
+    public JAXBElement<InitResponse> createInitResponse(InitResponse value) {
+        return new JAXBElement<InitResponse>(_InitResponse_QNAME, InitResponse.class, null, value);
     }
 
 }

@@ -13,6 +13,30 @@
 <message name="UtsFault">
 <part name="fault" element="tns:UtsFault" />
 </message>
+<message name="getAtomMovements">
+<part name="parameters" element="tns:getAtomMovements" />
+</message>
+<message name="getAtomMovementsResponse">
+<part name="parameters" element="tns:getAtomMovementsResponse" />
+</message>
+<message name="getTermDeletions">
+<part name="parameters" element="tns:getTermDeletions" />
+</message>
+<message name="getTermDeletionsResponse">
+<part name="parameters" element="tns:getTermDeletionsResponse" />
+</message>
+<message name="getConceptMerges">
+<part name="parameters" element="tns:getConceptMerges" />
+</message>
+<message name="getConceptMergesResponse">
+<part name="parameters" element="tns:getConceptMergesResponse" />
+</message>
+<message name="getConceptDeletions">
+<part name="parameters" element="tns:getConceptDeletions" />
+</message>
+<message name="getConceptDeletionsResponse">
+<part name="parameters" element="tns:getConceptDeletionsResponse" />
+</message>
 <message name="getBequeathedToConceptCuis">
 <part name="parameters" element="tns:getBequeathedToConceptCuis" />
 </message>
@@ -25,29 +49,11 @@
 <message name="getConceptBequeathalsResponse">
 <part name="parameters" element="tns:getConceptBequeathalsResponse" />
 </message>
-<message name="getConceptDeletions">
-<part name="parameters" element="tns:getConceptDeletions" />
-</message>
-<message name="getConceptDeletionsResponse">
-<part name="parameters" element="tns:getConceptDeletionsResponse" />
-</message>
 <message name="getMergedToConceptCui">
 <part name="parameters" element="tns:getMergedToConceptCui" />
 </message>
 <message name="getMergedToConceptCuiResponse">
 <part name="parameters" element="tns:getMergedToConceptCuiResponse" />
-</message>
-<message name="getMergedToTermUi">
-<part name="parameters" element="tns:getMergedToTermUi" />
-</message>
-<message name="getMergedToTermUiResponse">
-<part name="parameters" element="tns:getMergedToTermUiResponse" />
-</message>
-<message name="getConceptMerges">
-<part name="parameters" element="tns:getConceptMerges" />
-</message>
-<message name="getConceptMergesResponse">
-<part name="parameters" element="tns:getConceptMergesResponse" />
 </message>
 <message name="getMovedToConceptCui">
 <part name="parameters" element="tns:getMovedToConceptCui" />
@@ -55,23 +61,17 @@
 <message name="getMovedToConceptCuiResponse">
 <part name="parameters" element="tns:getMovedToConceptCuiResponse" />
 </message>
+<message name="getMergedToTermUi">
+<part name="parameters" element="tns:getMergedToTermUi" />
+</message>
+<message name="getMergedToTermUiResponse">
+<part name="parameters" element="tns:getMergedToTermUiResponse" />
+</message>
 <message name="getSourceAtomChanges">
 <part name="parameters" element="tns:getSourceAtomChanges" />
 </message>
 <message name="getSourceAtomChangesResponse">
 <part name="parameters" element="tns:getSourceAtomChangesResponse" />
-</message>
-<message name="getTermDeletions">
-<part name="parameters" element="tns:getTermDeletions" />
-</message>
-<message name="getTermDeletionsResponse">
-<part name="parameters" element="tns:getTermDeletionsResponse" />
-</message>
-<message name="getAtomMovements">
-<part name="parameters" element="tns:getAtomMovements" />
-</message>
-<message name="getAtomMovementsResponse">
-<part name="parameters" element="tns:getAtomMovementsResponse" />
 </message>
 <message name="getTermStringDeletions">
 <part name="parameters" element="tns:getTermStringDeletions" />
@@ -85,6 +85,26 @@
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermMergesResponse" message="tns:getTermMergesResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermMerges/Fault/UtsFault" />
 </operation>
+<operation name="getAtomMovements">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovementsRequest" message="tns:getAtomMovements" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovementsResponse" message="tns:getAtomMovementsResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovements/Fault/UtsFault" />
+</operation>
+<operation name="getTermDeletions">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletionsRequest" message="tns:getTermDeletions" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletionsResponse" message="tns:getTermDeletionsResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletions/Fault/UtsFault" />
+</operation>
+<operation name="getConceptMerges">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMergesRequest" message="tns:getConceptMerges" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMergesResponse" message="tns:getConceptMergesResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMerges/Fault/UtsFault" />
+</operation>
+<operation name="getConceptDeletions">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletionsRequest" message="tns:getConceptDeletions" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletionsResponse" message="tns:getConceptDeletionsResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletions/Fault/UtsFault" />
+</operation>
 <operation name="getBequeathedToConceptCuis">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getBequeathedToConceptCuisRequest" message="tns:getBequeathedToConceptCuis" />
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getBequeathedToConceptCuisResponse" message="tns:getBequeathedToConceptCuisResponse" />
@@ -95,45 +115,25 @@
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptBequeathalsResponse" message="tns:getConceptBequeathalsResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptBequeathals/Fault/UtsFault" />
 </operation>
-<operation name="getConceptDeletions">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletionsRequest" message="tns:getConceptDeletions" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletionsResponse" message="tns:getConceptDeletionsResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletions/Fault/UtsFault" />
-</operation>
 <operation name="getMergedToConceptCui">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToConceptCuiRequest" message="tns:getMergedToConceptCui" />
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToConceptCuiResponse" message="tns:getMergedToConceptCuiResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToConceptCui/Fault/UtsFault" />
-</operation>
-<operation name="getMergedToTermUi">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUiRequest" message="tns:getMergedToTermUi" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUiResponse" message="tns:getMergedToTermUiResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUi/Fault/UtsFault" />
-</operation>
-<operation name="getConceptMerges">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMergesRequest" message="tns:getConceptMerges" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMergesResponse" message="tns:getConceptMergesResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMerges/Fault/UtsFault" />
 </operation>
 <operation name="getMovedToConceptCui">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMovedToConceptCuiRequest" message="tns:getMovedToConceptCui" />
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMovedToConceptCuiResponse" message="tns:getMovedToConceptCuiResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMovedToConceptCui/Fault/UtsFault" />
 </operation>
+<operation name="getMergedToTermUi">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUiRequest" message="tns:getMergedToTermUi" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUiResponse" message="tns:getMergedToTermUiResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUi/Fault/UtsFault" />
+</operation>
 <operation name="getSourceAtomChanges">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getSourceAtomChangesRequest" message="tns:getSourceAtomChanges" />
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getSourceAtomChangesResponse" message="tns:getSourceAtomChangesResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getSourceAtomChanges/Fault/UtsFault" />
-</operation>
-<operation name="getTermDeletions">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletionsRequest" message="tns:getTermDeletions" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletionsResponse" message="tns:getTermDeletionsResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletions/Fault/UtsFault" />
-</operation>
-<operation name="getAtomMovements">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovementsRequest" message="tns:getAtomMovements" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovementsResponse" message="tns:getAtomMovementsResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovements/Fault/UtsFault" />
 </operation>
 <operation name="getTermStringDeletions">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermStringDeletionsRequest" message="tns:getTermStringDeletions" />
@@ -155,6 +155,54 @@
 <soap:fault name="UtsFault" use="literal" />
 </fault>
 </operation>
+<operation name="getAtomMovements">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+<fault name="UtsFault">
+<soap:fault name="UtsFault" use="literal" />
+</fault>
+</operation>
+<operation name="getTermDeletions">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+<fault name="UtsFault">
+<soap:fault name="UtsFault" use="literal" />
+</fault>
+</operation>
+<operation name="getConceptMerges">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+<fault name="UtsFault">
+<soap:fault name="UtsFault" use="literal" />
+</fault>
+</operation>
+<operation name="getConceptDeletions">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+<fault name="UtsFault">
+<soap:fault name="UtsFault" use="literal" />
+</fault>
+</operation>
 <operation name="getBequeathedToConceptCuis">
 <soap:operation soapAction="" />
 <input>
@@ -179,43 +227,7 @@
 <soap:fault name="UtsFault" use="literal" />
 </fault>
 </operation>
-<operation name="getConceptDeletions">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-<fault name="UtsFault">
-<soap:fault name="UtsFault" use="literal" />
-</fault>
-</operation>
 <operation name="getMergedToConceptCui">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-<fault name="UtsFault">
-<soap:fault name="UtsFault" use="literal" />
-</fault>
-</operation>
-<operation name="getMergedToTermUi">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-<fault name="UtsFault">
-<soap:fault name="UtsFault" use="literal" />
-</fault>
-</operation>
-<operation name="getConceptMerges">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -239,31 +251,19 @@
 <soap:fault name="UtsFault" use="literal" />
 </fault>
 </operation>
+<operation name="getMergedToTermUi">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+<fault name="UtsFault">
+<soap:fault name="UtsFault" use="literal" />
+</fault>
+</operation>
 <operation name="getSourceAtomChanges">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-<fault name="UtsFault">
-<soap:fault name="UtsFault" use="literal" />
-</fault>
-</operation>
-<operation name="getTermDeletions">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-<fault name="UtsFault">
-<soap:fault name="UtsFault" use="literal" />
-</fault>
-</operation>
-<operation name="getAtomMovements">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />

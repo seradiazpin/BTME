@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+       
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+
+        <title>BDTF - Search</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- Custom CSS -->
+        <link href="css/blog-post.css" rel="stylesheet"/>
+        <link href="css/small-business.css" rel="stylesheet"/>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </h:head>
+    <h:body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="img/brain.svg" height="45px" alt="Brain"></img>
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="search.html">Search</a>
+                            </li>
+                            <li>
+                                <a href="#">Database</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- Page Content -->
+            <div class="container">
+                  
+                <div class="row">        
+                    
+                    <div class="col-lg-8">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                            <li>
+                                <a data-toggle="tab" href="#menu1">Pubchem</a>
+                            </li>
+                            <li><a data-toggle="tab" href="#menu2" >GWAS</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- Content -->
+                            <div id="home" class="tab-pane fade in active">
+                            <h:form id="general">
+                                <ui:insert name="content" >
+                                    <ui:include src="templates/general.xhtml"/>
+                                </ui:insert>
+                            </h:form>
+                           
+                            </div>
+                        
+                            <div id="menu1" class="tab-pane fade">
+                                <h:form id="pubchem">
+                                <ui:insert name="content" >
+                                    <ui:include src="templates/pubchemTab.xhtml"/>
+                                </ui:insert>
+                                </h:form>
+                            </div>
+                            <div id="menu2" class="tab-pane fade">
+                                <h:form id="gwas">
+                                <ui:insert name="content" >
+                                    <ui:include src="templates/GWASTab.xhtml"/>
+                                </ui:insert>
+                                </h:form>
+                            </div>
+                            </div>
+                    </div>
+              
+                <!-- Blog Sidebar Widgets Column -->
+                <div class="col-md-4">
+
+                    <!-- Blog Search Well -->
+                    <div class="well">
+                        <h4>Search</h4>
+                        <div class="input-group">
+                            <h:form class="form-group">
+                                <h:inputText id="term" class="form-control" value="#{finder.term}" required = "true" requiredMessage="Termino nesesario"/>
+                                <span class="input-group-btn">
+                                    <h:commandButton   action="#{finder.find()}" value="Buscar" class="btn btn-default"/>
+                                        <span class="glyphicon glyphicon-search"></span>
+                                </span>     
+                            </h:form>
+                        </div>
+                        <!-- /.input-group -->
+                    </div>
+
+                    <!-- Blog Categories Well -->
+                    <div class="well">
+                        <h4>Results</h4>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <c:if test="#{finder.ans.size()!= 0}">
+                                    <div id="users">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button class="sort btn btn-info" data-sort="labelID">
+                                                    Sort by name
+                                                </button> 
+                                            </span>
+                                            <input class="search form-control" placeholder="Search" />
+                                        </div>
+
+                                        <div id="listId">
+                                            <ul class="list list-group">
+                                                <c:forEach items="#{finder.ans}" var="item">
+                                                    <h:form>
+                                                    <li class="list-group-item">
+                                                        <h:commandLink id="inputName" action="#{finder.information(item,true)}">
+                                                            <p><span class="labelID">#{item.name}</span></p>
+                                                            <f:ajax execute="inputName" render="general pubchem gwas" />
+                                                        </h:commandLink>
+                                                    </li>
+                                                        </h:form>
+                                                </c:forEach>
+                                            </ul>
+                                            <ul class="pagination"></ul>
+                                        </div>
+                                    </div>
+
+                                </c:if>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+
+                    <!-- Side Widget Well -->
+                    <div class="well">
+                        <h4>Recent activity</h4>
+                        <ul >
+                            <c:forEach items="#{finder.recent}" var="item">
+                                <h:form>
+                                <li class="list-group-item">
+                                    <h:commandLink id="inputName" action="#{finder.information(item,false)}">
+                                        <p><span class="labelID">#{item.name}</span></p>
+                                        <f:ajax execute="inputName" render="outputMessage" />
+                                    </h:commandLink>
+                                </li>
+                                    </h:form>
+                            </c:forEach>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+            <hr/>
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Your Website 2014</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+
+        </div>
+        <!-- /.container -->
+
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/list.min.js"></script>
+        <script src="js/list.pagination.min.js"></script>
+        <script>
+            var options = {
+                valueNames: [ 'ui', 'labelID' ],
+                page: 7,
+                plugins: [
+                    ListPagination({})
+                ]
+              };
+
+              var userList = new List('users', options);
+        </script>
+    </h:body>
+</html>
+

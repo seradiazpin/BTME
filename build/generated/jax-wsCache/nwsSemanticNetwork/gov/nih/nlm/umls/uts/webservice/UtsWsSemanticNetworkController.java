@@ -136,55 +136,6 @@ public interface UtsWsSemanticNetworkController {
      * @param ticket
      * @param version
      * @return
-     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.SemanticTypeRelationDTO>
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getInverseSemanticTypeRelations", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetInverseSemanticTypeRelations")
-    @ResponseWrapper(localName = "getInverseSemanticTypeRelationsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetInverseSemanticTypeRelationsResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelationsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelationsResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelations/Fault/UtsFault")
-    })
-    public List<SemanticTypeRelationDTO> getInverseSemanticTypeRelations(
-        @WebParam(name = "ticket", targetNamespace = "")
-        String ticket,
-        @WebParam(name = "version", targetNamespace = "")
-        String version,
-        @WebParam(name = "semanticTypeId", targetNamespace = "")
-        String semanticTypeId)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
-     * @param ticket
-     * @param version
-     * @return
-     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.SemanticTypeRelationDTO>
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAllSemanticTypeRelations", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetAllSemanticTypeRelations")
-    @ResponseWrapper(localName = "getAllSemanticTypeRelationsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetAllSemanticTypeRelationsResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelationsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelationsResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelations/Fault/UtsFault")
-    })
-    public List<SemanticTypeRelationDTO> getAllSemanticTypeRelations(
-        @WebParam(name = "ticket", targetNamespace = "")
-        String ticket,
-        @WebParam(name = "version", targetNamespace = "")
-        String version)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
-     * @param semanticTypeId
-     * @param ticket
-     * @param version
-     * @return
      *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.SemanticNetworkRelationLabelRelationDTO>
      * @throws UtsFault_Exception
      */
@@ -568,6 +519,55 @@ public interface UtsWsSemanticNetworkController {
         @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypes/Fault/UtsFault")
     })
     public List<SemanticTypeDTO> getAllSemanticTypes(
+        @WebParam(name = "ticket", targetNamespace = "")
+        String ticket,
+        @WebParam(name = "version", targetNamespace = "")
+        String version)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
+     * @param semanticTypeId
+     * @param ticket
+     * @param version
+     * @return
+     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.SemanticTypeRelationDTO>
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getInverseSemanticTypeRelations", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetInverseSemanticTypeRelations")
+    @ResponseWrapper(localName = "getInverseSemanticTypeRelationsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetInverseSemanticTypeRelationsResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelationsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelationsResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelations/Fault/UtsFault")
+    })
+    public List<SemanticTypeRelationDTO> getInverseSemanticTypeRelations(
+        @WebParam(name = "ticket", targetNamespace = "")
+        String ticket,
+        @WebParam(name = "version", targetNamespace = "")
+        String version,
+        @WebParam(name = "semanticTypeId", targetNamespace = "")
+        String semanticTypeId)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
+     * @param ticket
+     * @param version
+     * @return
+     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.SemanticTypeRelationDTO>
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAllSemanticTypeRelations", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetAllSemanticTypeRelations")
+    @ResponseWrapper(localName = "getAllSemanticTypeRelationsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetAllSemanticTypeRelationsResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelationsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelationsResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelations/Fault/UtsFault")
+    })
+    public List<SemanticTypeRelationDTO> getAllSemanticTypeRelations(
         @WebParam(name = "ticket", targetNamespace = "")
         String ticket,
         @WebParam(name = "version", targetNamespace = "")

@@ -81,26 +81,26 @@ public interface UtsWsMetadataController {
     /**
      * 
      * @param ticket
-     * @param termType
+     * @param language
      * @param version
      * @return
-     *     returns gov.nih.nlm.umls.uts.webservice.TermTypeDTO
+     *     returns gov.nih.nlm.umls.uts.webservice.LanguageDTO
      * @throws UtsFault_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getTermType", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetTermType")
-    @ResponseWrapper(localName = "getTermTypeResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetTermTypeResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermTypeRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermTypeResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermType/Fault/UtsFault")
+    @RequestWrapper(localName = "getLanguage", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetLanguage")
+    @ResponseWrapper(localName = "getLanguageResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetLanguageResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguageRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguageResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguage/Fault/UtsFault")
     })
-    public TermTypeDTO getTermType(
+    public LanguageDTO getLanguage(
         @WebParam(name = "ticket", targetNamespace = "")
         String ticket,
         @WebParam(name = "version", targetNamespace = "")
         String version,
-        @WebParam(name = "termType", targetNamespace = "")
-        String termType)
+        @WebParam(name = "language", targetNamespace = "")
+        String language)
         throws UtsFault_Exception
     ;
 
@@ -179,6 +179,58 @@ public interface UtsWsMetadataController {
         String version,
         @WebParam(name = "additionalRelationLabel", targetNamespace = "")
         String additionalRelationLabel)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
+     * @param ticket
+     * @param termType
+     * @param version
+     * @return
+     *     returns gov.nih.nlm.umls.uts.webservice.TermTypeDTO
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTermType", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetTermType")
+    @ResponseWrapper(localName = "getTermTypeResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetTermTypeResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermTypeRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermTypeResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermType/Fault/UtsFault")
+    })
+    public TermTypeDTO getTermType(
+        @WebParam(name = "ticket", targetNamespace = "")
+        String ticket,
+        @WebParam(name = "version", targetNamespace = "")
+        String version,
+        @WebParam(name = "termType", targetNamespace = "")
+        String termType)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
+     * @param characterSet
+     * @param ticket
+     * @param version
+     * @return
+     *     returns gov.nih.nlm.umls.uts.webservice.CharacterSetDTO
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCharacterSet", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetCharacterSet")
+    @ResponseWrapper(localName = "getCharacterSetResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetCharacterSetResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSetRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSetResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSet/Fault/UtsFault")
+    })
+    public CharacterSetDTO getCharacterSet(
+        @WebParam(name = "ticket", targetNamespace = "")
+        String ticket,
+        @WebParam(name = "version", targetNamespace = "")
+        String version,
+        @WebParam(name = "characterSet", targetNamespace = "")
+        String characterSet)
         throws UtsFault_Exception
     ;
 
@@ -349,32 +401,6 @@ public interface UtsWsMetadataController {
         String version,
         @WebParam(name = "rootSourceAbbreviation", targetNamespace = "")
         String rootSourceAbbreviation)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
-     * @param characterSet
-     * @param ticket
-     * @param version
-     * @return
-     *     returns gov.nih.nlm.umls.uts.webservice.CharacterSetDTO
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCharacterSet", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetCharacterSet")
-    @ResponseWrapper(localName = "getCharacterSetResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetCharacterSetResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSetRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSetResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSet/Fault/UtsFault")
-    })
-    public CharacterSetDTO getCharacterSet(
-        @WebParam(name = "ticket", targetNamespace = "")
-        String ticket,
-        @WebParam(name = "version", targetNamespace = "")
-        String version,
-        @WebParam(name = "characterSet", targetNamespace = "")
-        String characterSet)
         throws UtsFault_Exception
     ;
 
@@ -1232,32 +1258,6 @@ public interface UtsWsMetadataController {
         String ticket,
         @WebParam(name = "version", targetNamespace = "")
         String version)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
-     * @param ticket
-     * @param language
-     * @param version
-     * @return
-     *     returns gov.nih.nlm.umls.uts.webservice.LanguageDTO
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getLanguage", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetLanguage")
-    @ResponseWrapper(localName = "getLanguageResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetLanguageResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguageRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguageResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguage/Fault/UtsFault")
-    })
-    public LanguageDTO getLanguage(
-        @WebParam(name = "ticket", targetNamespace = "")
-        String ticket,
-        @WebParam(name = "version", targetNamespace = "")
-        String version,
-        @WebParam(name = "language", targetNamespace = "")
-        String language)
         throws UtsFault_Exception
     ;
 

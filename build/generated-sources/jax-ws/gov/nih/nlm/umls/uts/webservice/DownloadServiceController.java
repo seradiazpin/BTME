@@ -27,6 +27,15 @@ public interface DownloadServiceController {
 
     /**
      * 
+     */
+    @WebMethod
+    @RequestWrapper(localName = "init", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.Init")
+    @ResponseWrapper(localName = "initResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.InitResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/initRequest", output = "http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/initResponse")
+    public void init();
+
+    /**
+     * 
      * @param ticket
      * @return
      *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.DlGroupDTO>
@@ -150,14 +159,5 @@ public interface DownloadServiceController {
         String ticket,
         @WebParam(name = "releaseName", targetNamespace = "")
         String releaseName);
-
-    /**
-     * 
-     */
-    @WebMethod
-    @RequestWrapper(localName = "init", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.Init")
-    @ResponseWrapper(localName = "initResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.InitResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/initRequest", output = "http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/initResponse")
-    public void init();
 
 }

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+        <ui:composition>
+            <h4>GWAS</h4>
+            <h3>Phenotypes</h3>
+            <c:forEach items="#{finder.searchPhenotypes}" var="phenotype">
+                <div class="col-lg-6">
+                    <div class="well">
+                        <a class="text-left" href="#{phenotype.link}">
+                        <h5>#{phenotype.title}</h5>
+                        </a>
+                        <p>#{phenotype.phenotypeProperty}</p>
+                        <p>#{phenotype.studyName}</p>
+                    </div>
+                
+                </div>
+            </c:forEach>
+            <h3>Study</h3>
+            <c:if test="#{finder.searchStudys.size() != 0 }">
+            <c:forEach items="#{finder.searchStudys}" var="study">
+                <h4>#{study.name}</h4>
+                <p class="text-justify">#{study.abstract}</p>
+                
+                <h6><b>Phaenotypes</b></h6>
+                <ul class="list-inline">
+                    <c:forEach items="#{study.phenotypes}" var="pheno">
+                        <li>#{pheno}</li>
+                    </c:forEach>
+                </ul>
+                <a class="btn bg-primary" href="#{study.link}">
+                    <img class="img-responsive" src="http://www.gwascentral.org/images/genomeview/#{study.identifier}/threshold3.png"></img>
+                </a>
+                <hr/>
+            </c:forEach>
+            </c:if>
+	</ui:composition>
+    </body>
+</html>

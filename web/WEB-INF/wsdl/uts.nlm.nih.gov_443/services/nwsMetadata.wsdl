@@ -19,11 +19,11 @@
 <message name="getAttributeNameResponse">
 <part name="parameters" element="tns:getAttributeNameResponse" />
 </message>
-<message name="getTermType">
-<part name="parameters" element="tns:getTermType" />
+<message name="getLanguage">
+<part name="parameters" element="tns:getLanguage" />
 </message>
-<message name="getTermTypeResponse">
-<part name="parameters" element="tns:getTermTypeResponse" />
+<message name="getLanguageResponse">
+<part name="parameters" element="tns:getLanguageResponse" />
 </message>
 <message name="getRootSource">
 <part name="parameters" element="tns:getRootSource" />
@@ -42,6 +42,18 @@
 </message>
 <message name="getAdditionalRelationLabelResponse">
 <part name="parameters" element="tns:getAdditionalRelationLabelResponse" />
+</message>
+<message name="getTermType">
+<part name="parameters" element="tns:getTermType" />
+</message>
+<message name="getTermTypeResponse">
+<part name="parameters" element="tns:getTermTypeResponse" />
+</message>
+<message name="getCharacterSet">
+<part name="parameters" element="tns:getCharacterSet" />
+</message>
+<message name="getCharacterSetResponse">
+<part name="parameters" element="tns:getCharacterSetResponse" />
 </message>
 <message name="getContentContactInformation">
 <part name="parameters" element="tns:getContentContactInformation" />
@@ -84,12 +96,6 @@
 </message>
 <message name="getAcquisitionContactInformationResponse">
 <part name="parameters" element="tns:getAcquisitionContactInformationResponse" />
-</message>
-<message name="getCharacterSet">
-<part name="parameters" element="tns:getCharacterSet" />
-</message>
-<message name="getCharacterSetResponse">
-<part name="parameters" element="tns:getCharacterSetResponse" />
 </message>
 <message name="getIdentifierType">
 <part name="parameters" element="tns:getIdentifierType" />
@@ -295,12 +301,6 @@
 <message name="getAllRootSourceFamiliesResponse">
 <part name="parameters" element="tns:getAllRootSourceFamiliesResponse" />
 </message>
-<message name="getLanguage">
-<part name="parameters" element="tns:getLanguage" />
-</message>
-<message name="getLanguageResponse">
-<part name="parameters" element="tns:getLanguageResponse" />
-</message>
 <portType name="UtsWsMetadataController">
 <operation name="getSource">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getSourceRequest" message="tns:getSource" />
@@ -312,10 +312,10 @@
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAttributeNameResponse" message="tns:getAttributeNameResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAttributeName/Fault/UtsFault" />
 </operation>
-<operation name="getTermType">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermTypeRequest" message="tns:getTermType" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermTypeResponse" message="tns:getTermTypeResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermType/Fault/UtsFault" />
+<operation name="getLanguage">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguageRequest" message="tns:getLanguage" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguageResponse" message="tns:getLanguageResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguage/Fault/UtsFault" />
 </operation>
 <operation name="getRootSource">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getRootSourceRequest" message="tns:getRootSource" />
@@ -331,6 +331,16 @@
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAdditionalRelationLabelRequest" message="tns:getAdditionalRelationLabel" />
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAdditionalRelationLabelResponse" message="tns:getAdditionalRelationLabelResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAdditionalRelationLabel/Fault/UtsFault" />
+</operation>
+<operation name="getTermType">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermTypeRequest" message="tns:getTermType" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermTypeResponse" message="tns:getTermTypeResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getTermType/Fault/UtsFault" />
+</operation>
+<operation name="getCharacterSet">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSetRequest" message="tns:getCharacterSet" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSetResponse" message="tns:getCharacterSetResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSet/Fault/UtsFault" />
 </operation>
 <operation name="getContentContactInformation">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getContentContactInformationRequest" message="tns:getContentContactInformation" />
@@ -366,11 +376,6 @@
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAcquisitionContactInformationRequest" message="tns:getAcquisitionContactInformation" />
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAcquisitionContactInformationResponse" message="tns:getAcquisitionContactInformationResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAcquisitionContactInformation/Fault/UtsFault" />
-</operation>
-<operation name="getCharacterSet">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSetRequest" message="tns:getCharacterSet" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSetResponse" message="tns:getCharacterSetResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getCharacterSet/Fault/UtsFault" />
 </operation>
 <operation name="getIdentifierType">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getIdentifierTypeRequest" message="tns:getIdentifierType" />
@@ -542,11 +547,6 @@
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAllRootSourceFamiliesResponse" message="tns:getAllRootSourceFamiliesResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getAllRootSourceFamilies/Fault/UtsFault" />
 </operation>
-<operation name="getLanguage">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguageRequest" message="tns:getLanguage" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguageResponse" message="tns:getLanguageResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsMetadataController/getLanguage/Fault/UtsFault" />
-</operation>
 </portType>
 <binding name="UtsWsMetadataControllerImplPortBinding" type="tns:UtsWsMetadataController">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
@@ -574,7 +574,7 @@
 <soap:fault name="UtsFault" use="literal" />
 </fault>
 </operation>
-<operation name="getTermType">
+<operation name="getLanguage">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -611,6 +611,30 @@
 </fault>
 </operation>
 <operation name="getAdditionalRelationLabel">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+<fault name="UtsFault">
+<soap:fault name="UtsFault" use="literal" />
+</fault>
+</operation>
+<operation name="getTermType">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+<fault name="UtsFault">
+<soap:fault name="UtsFault" use="literal" />
+</fault>
+</operation>
+<operation name="getCharacterSet">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -695,18 +719,6 @@
 </fault>
 </operation>
 <operation name="getAcquisitionContactInformation">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-<fault name="UtsFault">
-<soap:fault name="UtsFault" use="literal" />
-</fault>
-</operation>
-<operation name="getCharacterSet">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -1115,18 +1127,6 @@
 </fault>
 </operation>
 <operation name="getAllRootSourceFamilies">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-<fault name="UtsFault">
-<soap:fault name="UtsFault" use="literal" />
-</fault>
-</operation>
-<operation name="getLanguage">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />

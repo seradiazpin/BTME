@@ -27,6 +27,49 @@ public interface UtsWsSecurityController {
 
     /**
      * 
+     * @param pw
+     * @param user
+     * @return
+     *     returns java.lang.String
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getProxyGrantTicket", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetProxyGrantTicket")
+    @ResponseWrapper(localName = "getProxyGrantTicketResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetProxyGrantTicketResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicket/Fault/UtsFault")
+    })
+    public String getProxyGrantTicket(
+        @WebParam(name = "user", targetNamespace = "")
+        String user,
+        @WebParam(name = "pw", targetNamespace = "")
+        String pw)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
+     * @param apikey
+     * @return
+     *     returns java.lang.String
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getProxyGrantTicketWithApiKey", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetProxyGrantTicketWithApiKey")
+    @ResponseWrapper(localName = "getProxyGrantTicketWithApiKeyResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetProxyGrantTicketWithApiKeyResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketWithApiKeyRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketWithApiKeyResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketWithApiKey/Fault/UtsFault")
+    })
+    public String getProxyGrantTicketWithApiKey(
+        @WebParam(name = "apikey", targetNamespace = "")
+        String apikey)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
      * @param tgt
      * @param service
      * @return
@@ -68,49 +111,6 @@ public interface UtsWsSecurityController {
         String ticket,
         @WebParam(name = "service", targetNamespace = "")
         String service)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
-     * @param pw
-     * @param user
-     * @return
-     *     returns java.lang.String
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getProxyGrantTicket", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetProxyGrantTicket")
-    @ResponseWrapper(localName = "getProxyGrantTicketResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetProxyGrantTicketResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicket/Fault/UtsFault")
-    })
-    public String getProxyGrantTicket(
-        @WebParam(name = "user", targetNamespace = "")
-        String user,
-        @WebParam(name = "pw", targetNamespace = "")
-        String pw)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
-     * @param apikey
-     * @return
-     *     returns java.lang.String
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getProxyGrantTicketWithApiKey", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetProxyGrantTicketWithApiKey")
-    @ResponseWrapper(localName = "getProxyGrantTicketWithApiKeyResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetProxyGrantTicketWithApiKeyResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketWithApiKeyRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketWithApiKeyResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsSecurityController/getProxyGrantTicketWithApiKey/Fault/UtsFault")
-    })
-    public String getProxyGrantTicketWithApiKey(
-        @WebParam(name = "apikey", targetNamespace = "")
-        String apikey)
         throws UtsFault_Exception
     ;
 

@@ -190,21 +190,6 @@
 </xs:complexContent>
 </xs:complexType>
 
-<xs:complexType name="getBequeathedToConceptCuis">
-<xs:sequence>
-<xs:element name="ticket" type="xs:string" minOccurs="0" />
-<xs:element name="version" type="xs:string" minOccurs="0" />
-<xs:element name="conceptId" type="xs:string" minOccurs="0" />
-<xs:element name="targetVersion" type="xs:string" minOccurs="0" />
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getBequeathedToConceptCuisResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="getAtomMovements">
 <xs:sequence>
 <xs:element name="ticket" type="xs:string" minOccurs="0" />
@@ -228,6 +213,21 @@
 </xs:sequence>
 </xs:extension>
 </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getBequeathedToConceptCuis">
+<xs:sequence>
+<xs:element name="ticket" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+<xs:element name="conceptId" type="xs:string" minOccurs="0" />
+<xs:element name="targetVersion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBequeathedToConceptCuisResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="getConceptMerges">

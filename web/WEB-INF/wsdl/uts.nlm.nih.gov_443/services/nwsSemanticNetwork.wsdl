@@ -31,18 +31,6 @@
 <message name="getInheritedSemanticNetworkRelationLabelRelationsResponse">
 <part name="parameters" element="tns:getInheritedSemanticNetworkRelationLabelRelationsResponse" />
 </message>
-<message name="getInverseSemanticTypeRelations">
-<part name="parameters" element="tns:getInverseSemanticTypeRelations" />
-</message>
-<message name="getInverseSemanticTypeRelationsResponse">
-<part name="parameters" element="tns:getInverseSemanticTypeRelationsResponse" />
-</message>
-<message name="getAllSemanticTypeRelations">
-<part name="parameters" element="tns:getAllSemanticTypeRelations" />
-</message>
-<message name="getAllSemanticTypeRelationsResponse">
-<part name="parameters" element="tns:getAllSemanticTypeRelationsResponse" />
-</message>
 <message name="getInverseInheritedSemanticNetworkRelationLabelRelations">
 <part name="parameters" element="tns:getInverseInheritedSemanticNetworkRelationLabelRelations" />
 </message>
@@ -133,6 +121,18 @@
 <message name="getAllSemanticTypesResponse">
 <part name="parameters" element="tns:getAllSemanticTypesResponse" />
 </message>
+<message name="getInverseSemanticTypeRelations">
+<part name="parameters" element="tns:getInverseSemanticTypeRelations" />
+</message>
+<message name="getInverseSemanticTypeRelationsResponse">
+<part name="parameters" element="tns:getInverseSemanticTypeRelationsResponse" />
+</message>
+<message name="getAllSemanticTypeRelations">
+<part name="parameters" element="tns:getAllSemanticTypeRelations" />
+</message>
+<message name="getAllSemanticTypeRelationsResponse">
+<part name="parameters" element="tns:getAllSemanticTypeRelationsResponse" />
+</message>
 <portType name="UtsWsSemanticNetworkController">
 <operation name="getSemanticType">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getSemanticTypeRequest" message="tns:getSemanticType" />
@@ -153,16 +153,6 @@
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInheritedSemanticNetworkRelationLabelRelationsRequest" message="tns:getInheritedSemanticNetworkRelationLabelRelations" />
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInheritedSemanticNetworkRelationLabelRelationsResponse" message="tns:getInheritedSemanticNetworkRelationLabelRelationsResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInheritedSemanticNetworkRelationLabelRelations/Fault/UtsFault" />
-</operation>
-<operation name="getInverseSemanticTypeRelations">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelationsRequest" message="tns:getInverseSemanticTypeRelations" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelationsResponse" message="tns:getInverseSemanticTypeRelationsResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelations/Fault/UtsFault" />
-</operation>
-<operation name="getAllSemanticTypeRelations">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelationsRequest" message="tns:getAllSemanticTypeRelations" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelationsResponse" message="tns:getAllSemanticTypeRelationsResponse" />
-<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelations/Fault/UtsFault" />
 </operation>
 <operation name="getInverseInheritedSemanticNetworkRelationLabelRelations">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseInheritedSemanticNetworkRelationLabelRelationsRequest" message="tns:getInverseInheritedSemanticNetworkRelationLabelRelations" />
@@ -239,6 +229,16 @@
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypesResponse" message="tns:getAllSemanticTypesResponse" />
 <fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypes/Fault/UtsFault" />
 </operation>
+<operation name="getInverseSemanticTypeRelations">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelationsRequest" message="tns:getInverseSemanticTypeRelations" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelationsResponse" message="tns:getInverseSemanticTypeRelationsResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getInverseSemanticTypeRelations/Fault/UtsFault" />
+</operation>
+<operation name="getAllSemanticTypeRelations">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelationsRequest" message="tns:getAllSemanticTypeRelations" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelationsResponse" message="tns:getAllSemanticTypeRelationsResponse" />
+<fault message="tns:UtsFault" name="UtsFault" wsam:Action="http://webservice.uts.umls.nlm.nih.gov/UtsWsSemanticNetworkController/getAllSemanticTypeRelations/Fault/UtsFault" />
+</operation>
 </portType>
 <binding name="UtsWsSemanticNetworkControllerImplPortBinding" type="tns:UtsWsSemanticNetworkController">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
@@ -279,30 +279,6 @@
 </fault>
 </operation>
 <operation name="getInheritedSemanticNetworkRelationLabelRelations">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-<fault name="UtsFault">
-<soap:fault name="UtsFault" use="literal" />
-</fault>
-</operation>
-<operation name="getInverseSemanticTypeRelations">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-<fault name="UtsFault">
-<soap:fault name="UtsFault" use="literal" />
-</fault>
-</operation>
-<operation name="getAllSemanticTypeRelations">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -483,6 +459,30 @@
 </fault>
 </operation>
 <operation name="getAllSemanticTypes">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+<fault name="UtsFault">
+<soap:fault name="UtsFault" use="literal" />
+</fault>
+</operation>
+<operation name="getInverseSemanticTypeRelations">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+<fault name="UtsFault">
+<soap:fault name="UtsFault" use="literal" />
+</fault>
+</operation>
+<operation name="getAllSemanticTypeRelations">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />

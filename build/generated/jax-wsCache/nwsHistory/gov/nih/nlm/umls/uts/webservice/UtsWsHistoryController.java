@@ -54,6 +54,119 @@ public interface UtsWsHistoryController {
 
     /**
      * 
+     * @param atomId
+     * @param ticket
+     * @param version
+     * @return
+     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.AtomMovementDTO>
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAtomMovements", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetAtomMovements")
+    @ResponseWrapper(localName = "getAtomMovementsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetAtomMovementsResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovementsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovementsResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovements/Fault/UtsFault")
+    })
+    public List<AtomMovementDTO> getAtomMovements(
+        @WebParam(name = "ticket", targetNamespace = "")
+        String ticket,
+        @WebParam(name = "version", targetNamespace = "")
+        String version,
+        @WebParam(name = "atomId", targetNamespace = "")
+        String atomId)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
+     * @param termId
+     * @param fromVersion
+     * @param ticket
+     * @param version
+     * @return
+     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.TermDeathDTO>
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTermDeletions", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetTermDeletions")
+    @ResponseWrapper(localName = "getTermDeletionsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetTermDeletionsResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletionsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletionsResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletions/Fault/UtsFault")
+    })
+    public List<TermDeathDTO> getTermDeletions(
+        @WebParam(name = "ticket", targetNamespace = "")
+        String ticket,
+        @WebParam(name = "version", targetNamespace = "")
+        String version,
+        @WebParam(name = "termId", targetNamespace = "")
+        String termId,
+        @WebParam(name = "fromVersion", targetNamespace = "")
+        String fromVersion)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
+     * @param olderVersion
+     * @param ticket
+     * @param conceptId
+     * @param newerVersion
+     * @return
+     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.ConceptMergeDTO>
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getConceptMerges", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetConceptMerges")
+    @ResponseWrapper(localName = "getConceptMergesResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetConceptMergesResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMergesRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMergesResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMerges/Fault/UtsFault")
+    })
+    public List<ConceptMergeDTO> getConceptMerges(
+        @WebParam(name = "ticket", targetNamespace = "")
+        String ticket,
+        @WebParam(name = "newerVersion", targetNamespace = "")
+        String newerVersion,
+        @WebParam(name = "conceptId", targetNamespace = "")
+        String conceptId,
+        @WebParam(name = "olderVersion", targetNamespace = "")
+        String olderVersion)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
+     * @param olderVersion
+     * @param ticket
+     * @param conceptId
+     * @param newerVersion
+     * @return
+     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.ConceptDeathDTO>
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getConceptDeletions", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetConceptDeletions")
+    @ResponseWrapper(localName = "getConceptDeletionsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetConceptDeletionsResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletionsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletionsResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletions/Fault/UtsFault")
+    })
+    public List<ConceptDeathDTO> getConceptDeletions(
+        @WebParam(name = "ticket", targetNamespace = "")
+        String ticket,
+        @WebParam(name = "newerVersion", targetNamespace = "")
+        String newerVersion,
+        @WebParam(name = "conceptId", targetNamespace = "")
+        String conceptId,
+        @WebParam(name = "olderVersion", targetNamespace = "")
+        String olderVersion)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
      * @param ticket
      * @param conceptId
      * @param version
@@ -112,35 +225,6 @@ public interface UtsWsHistoryController {
 
     /**
      * 
-     * @param olderVersion
-     * @param ticket
-     * @param conceptId
-     * @param newerVersion
-     * @return
-     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.ConceptDeathDTO>
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getConceptDeletions", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetConceptDeletions")
-    @ResponseWrapper(localName = "getConceptDeletionsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetConceptDeletionsResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletionsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletionsResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptDeletions/Fault/UtsFault")
-    })
-    public List<ConceptDeathDTO> getConceptDeletions(
-        @WebParam(name = "ticket", targetNamespace = "")
-        String ticket,
-        @WebParam(name = "newerVersion", targetNamespace = "")
-        String newerVersion,
-        @WebParam(name = "conceptId", targetNamespace = "")
-        String conceptId,
-        @WebParam(name = "olderVersion", targetNamespace = "")
-        String olderVersion)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
      * @param ticket
      * @param conceptId
      * @param version
@@ -167,61 +251,6 @@ public interface UtsWsHistoryController {
 
     /**
      * 
-     * @param termId
-     * @param ticket
-     * @param version
-     * @return
-     *     returns java.lang.String
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getMergedToTermUi", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetMergedToTermUi")
-    @ResponseWrapper(localName = "getMergedToTermUiResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetMergedToTermUiResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUiRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUiResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUi/Fault/UtsFault")
-    })
-    public String getMergedToTermUi(
-        @WebParam(name = "ticket", targetNamespace = "")
-        String ticket,
-        @WebParam(name = "version", targetNamespace = "")
-        String version,
-        @WebParam(name = "termId", targetNamespace = "")
-        String termId)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
-     * @param olderVersion
-     * @param ticket
-     * @param conceptId
-     * @param newerVersion
-     * @return
-     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.ConceptMergeDTO>
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getConceptMerges", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetConceptMerges")
-    @ResponseWrapper(localName = "getConceptMergesResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetConceptMergesResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMergesRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMergesResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getConceptMerges/Fault/UtsFault")
-    })
-    public List<ConceptMergeDTO> getConceptMerges(
-        @WebParam(name = "ticket", targetNamespace = "")
-        String ticket,
-        @WebParam(name = "newerVersion", targetNamespace = "")
-        String newerVersion,
-        @WebParam(name = "conceptId", targetNamespace = "")
-        String conceptId,
-        @WebParam(name = "olderVersion", targetNamespace = "")
-        String olderVersion)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
      * @param atomId
      * @param ticket
      * @param version
@@ -243,6 +272,32 @@ public interface UtsWsHistoryController {
         String version,
         @WebParam(name = "atomId", targetNamespace = "")
         String atomId)
+        throws UtsFault_Exception
+    ;
+
+    /**
+     * 
+     * @param termId
+     * @param ticket
+     * @param version
+     * @return
+     *     returns java.lang.String
+     * @throws UtsFault_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getMergedToTermUi", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetMergedToTermUi")
+    @ResponseWrapper(localName = "getMergedToTermUiResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetMergedToTermUiResponse")
+    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUiRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUiResponse", fault = {
+        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getMergedToTermUi/Fault/UtsFault")
+    })
+    public String getMergedToTermUi(
+        @WebParam(name = "ticket", targetNamespace = "")
+        String ticket,
+        @WebParam(name = "version", targetNamespace = "")
+        String version,
+        @WebParam(name = "termId", targetNamespace = "")
+        String termId)
         throws UtsFault_Exception
     ;
 
@@ -275,61 +330,6 @@ public interface UtsWsHistoryController {
         String rootSourceAbbreviation,
         @WebParam(name = "sourceAtomId", targetNamespace = "")
         String sourceAtomId)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
-     * @param termId
-     * @param fromVersion
-     * @param ticket
-     * @param version
-     * @return
-     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.TermDeathDTO>
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getTermDeletions", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetTermDeletions")
-    @ResponseWrapper(localName = "getTermDeletionsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetTermDeletionsResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletionsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletionsResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getTermDeletions/Fault/UtsFault")
-    })
-    public List<TermDeathDTO> getTermDeletions(
-        @WebParam(name = "ticket", targetNamespace = "")
-        String ticket,
-        @WebParam(name = "version", targetNamespace = "")
-        String version,
-        @WebParam(name = "termId", targetNamespace = "")
-        String termId,
-        @WebParam(name = "fromVersion", targetNamespace = "")
-        String fromVersion)
-        throws UtsFault_Exception
-    ;
-
-    /**
-     * 
-     * @param atomId
-     * @param ticket
-     * @param version
-     * @return
-     *     returns java.util.List<gov.nih.nlm.umls.uts.webservice.AtomMovementDTO>
-     * @throws UtsFault_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAtomMovements", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetAtomMovements")
-    @ResponseWrapper(localName = "getAtomMovementsResponse", targetNamespace = "http://webservice.uts.umls.nlm.nih.gov/", className = "gov.nih.nlm.umls.uts.webservice.GetAtomMovementsResponse")
-    @Action(input = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovementsRequest", output = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovementsResponse", fault = {
-        @FaultAction(className = UtsFault_Exception.class, value = "http://webservice.uts.umls.nlm.nih.gov/UtsWsHistoryController/getAtomMovements/Fault/UtsFault")
-    })
-    public List<AtomMovementDTO> getAtomMovements(
-        @WebParam(name = "ticket", targetNamespace = "")
-        String ticket,
-        @WebParam(name = "version", targetNamespace = "")
-        String version,
-        @WebParam(name = "atomId", targetNamespace = "")
-        String atomId)
         throws UtsFault_Exception
     ;
 

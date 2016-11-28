@@ -4,6 +4,12 @@
 <xsd:import namespace="http://webservice.uts.umls.nlm.nih.gov/" schemaLocation="https://uts.nlm.nih.gov:443/services/download?xsd=1" />
 </xsd:schema>
 </types>
+<message name="init">
+<part name="parameters" element="tns:init" />
+</message>
+<message name="initResponse">
+<part name="parameters" element="tns:initResponse" />
+</message>
 <message name="getValidDownloadGroups">
 <part name="parameters" element="tns:getValidDownloadGroups" />
 </message>
@@ -46,13 +52,11 @@
 <message name="getDownloadArtifactsResponse">
 <part name="parameters" element="tns:getDownloadArtifactsResponse" />
 </message>
-<message name="init">
-<part name="parameters" element="tns:init" />
-</message>
-<message name="initResponse">
-<part name="parameters" element="tns:initResponse" />
-</message>
 <portType name="DownloadServiceController">
+<operation name="init">
+<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/initRequest" message="tns:init" />
+<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/initResponse" message="tns:initResponse" />
+</operation>
 <operation name="getValidDownloadGroups">
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/getValidDownloadGroupsRequest" message="tns:getValidDownloadGroups" />
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/getValidDownloadGroupsResponse" message="tns:getValidDownloadGroupsResponse" />
@@ -81,13 +85,18 @@
 <input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/getDownloadArtifactsRequest" message="tns:getDownloadArtifacts" />
 <output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/getDownloadArtifactsResponse" message="tns:getDownloadArtifactsResponse" />
 </operation>
-<operation name="init">
-<input wsam:Action="http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/initRequest" message="tns:init" />
-<output wsam:Action="http://webservice.uts.umls.nlm.nih.gov/DownloadServiceController/initResponse" message="tns:initResponse" />
-</operation>
 </portType>
 <binding name="DownloadServiceControllerPortBinding" type="tns:DownloadServiceController">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+<operation name="init">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
 <operation name="getValidDownloadGroups">
 <soap:operation soapAction="" />
 <input>
@@ -143,15 +152,6 @@
 </output>
 </operation>
 <operation name="getDownloadArtifacts">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-</operation>
-<operation name="init">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
